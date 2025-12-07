@@ -1,0 +1,105 @@
+{
+  "ext_name": { "message": "Gemini Shortcut Effective Extension" },
+  "ext_short_name": { "message": "Gemini Shortcut Extension" },
+  "ext_description": {
+    "message": "Envio mais seguro, deslocação ao estilo Vim, alternância de modelos, chats temporários e interface limpa para o Gemini."
+  },
+  "html_lang": { "message": "pt-PT" },
+  "popup_section_feature_toggles": { "message": "Comutadores de funcionalidades" },
+  "popup_section_shortcuts": { "message": "Atalhos" },
+  "popup_loading": { "message": "A carregar…" },
+  "popup_load_error": {
+    "message": "Não foi possível carregar as definições. Recarregue a extensão."
+  },
+  "popup_settings_unavailable": { "message": "Não foi possível carregar as definições." },
+  "popup_toggle_label_vim_scroll": { "message": "Deslocação ao estilo Vim" },
+  "popup_toggle_label_wide_screen": { "message": "Ecrã amplo (IU limpa + foco)" },
+  "popup_toggle_label_safe_send": { "message": "Enviar com Cmd/Ctrl + Enter" },
+  "popup_toggle_label_other_shortcuts": { "message": "Outros atalhos" },
+  "popup_toggle_enable_success": { "message": "\"$1\" foi ativado." },
+  "popup_toggle_disable_success": { "message": "\"$1\" foi desativado." },
+  "popup_toggle_save_error": {
+    "message": "Não foi possível guardar o comutador. Tente novamente."
+  },
+  "popup_reset_button": { "message": "Repor" },
+  "popup_resetting": { "message": "A repor…" },
+  "popup_reset_success": { "message": "Todas as definições voltaram aos valores predefinidos." },
+  "popup_reset_error": { "message": "Não foi possível repor. Tente novamente." },
+  "popup_shortcut_placeholder": { "message": "Prima as teclas" },
+  "popup_shortcut_conflict_user": {
+    "message": "\"$1\" já está atribuído a \"$2\". Escolha outra combinação."
+  },
+  "popup_shortcut_conflict_gemini": {
+    "message": "\"$1\" pode entrar em conflito com o atalho predefinido \"$2\" do Gemini. O predefinido pode deixar de funcionar."
+  },
+  "error_shortcut_requires_modifier": {
+    "message": "\"$1\" deve ser combinado com uma tecla modificadora.",
+    "description": "Shown when a disallowed single key is used without modifiers."
+  },
+  "error_shortcut_forbidden_key": {
+    "message": "\"$1\" não pode ser usado como atalho.",
+    "description": "Shown when a key is not allowed at all."
+  },
+  "popup_shortcut_error_disallowed_key": {
+    "message": "\"$1\" cannot be used as a shortcut key."
+  },
+  "popup_shortcut_error_modifier_required": {
+    "message": "\"$1\" requires a modifier key (Ctrl/Cmd/Alt/Shift)."
+  },
+  "popup_shortcut_success": { "message": "O atalho de \"$1\" foi atualizado." },
+  "popup_shortcut_error": { "message": "Não foi possível guardar o atalho. Tente novamente." },
+  "popup_shortcut_empty_state": {
+    "message": "Não existem atalhos ativos. Ative um comutador para os gerir."
+  },
+  "keyboard_label_ctrl": { "message": "Ctrl" },
+  "keyboard_label_cmd": { "message": "Cmd" },
+  "keyboard_label_alt": { "message": "Alt" },
+  "keyboard_label_shift": { "message": "Shift" },
+  "keyboard_label_space": { "message": "Espaço" },
+  "shortcuts_section_gemini_defaults": { "message": "Predefinições do Gemini" },
+  "shortcuts_section_settings": { "message": "Definições" },
+  "shortcuts_section_vim_scroll": { "message": "Deslocação Vim" },
+  "shortcuts_section_wide_screen": { "message": "Ecrã amplo" },
+  "shortcuts_section_model_switching": { "message": "Alteração de modelo" },
+  "shortcuts_section_other": { "message": "Outros" },
+  "shortcuts_item_open_settings": { "message": "Abrir definições" },
+  "shortcuts_action_open_settings_link": { "message": "Abrir" },
+  "shortcuts_dialog_title": { "message": "Atalhos de teclado" },
+  "shortcuts_dialog_close": { "message": "Fechar" },
+  "shortcut_label_scroll_top": { "message": "Deslocar para o topo" },
+  "shortcut_label_scroll_bottom": { "message": "Deslocar para o fundo" },
+  "shortcut_label_scroll_up": { "message": "Deslocar para cima" },
+  "shortcut_label_scroll_down": { "message": "Deslocar para baixo" },
+  "shortcut_label_scroll_half_up": { "message": "Deslocar meia página para cima" },
+  "shortcut_label_scroll_half_down": { "message": "Deslocar meia página para baixo" },
+  "shortcut_label_toggle_focus": { "message": "Alternar foco" },
+  "shortcut_label_toggle_model": { "message": "Alternar seletor de modelo" },
+  "shortcut_label_mode_instant": { "message": "Definir modo: Instant" },
+  "shortcut_label_mode_thinking": { "message": "Definir modo: Thinking" },
+  "shortcut_label_temporary_chat": { "message": "Abrir chat temporário" },
+  "shortcut_label_toggle_shortcuts": { "message": "Alternar lista de atalhos" },
+  "shortcut_label_delete_chat": { "message": "Eliminar chat" },
+  "shortcut_label_upload_files": { "message": "Carregar ficheiros" },
+  "shortcut_label_pin_chat": { "message": "Fixar chat" },
+  "gemini_default_shortcut_new_chat": { "message": "Novo chat" },
+  "gemini_default_shortcut_search": { "message": "Pesquisar" },
+  "gemini_default_shortcut_toggle_sidebar": { "message": "Alternar barra lateral" },
+  "toast_no_chat_selected": { "message": "Não existe nenhum chat selecionado." },
+  "toast_pin_failed": { "message": "Não foi possível fixar o chat." },
+  "toast_temp_chat_failed": {
+    "message": "Não foi possível abrir um chat temporário. Recarregue a página."
+  },
+  "toast_delete_failed": { "message": "Não foi possível eliminar o chat." },
+  "toast_send_button_missing": { "message": "Não foi possível encontrar o botão Enviar." },
+  "toast_upload_failed": { "message": "Não foi possível abrir o menu de carregamento." },
+  "toast_gem_create_failed": {
+    "message": "Não foi possível abrir a página de criação de Gems. Recarregue a página."
+  },
+  "chat_delete_dialog_title": { "message": "Eliminar chat?" },
+  "chat_delete_dialog_body_generic": { "message": "O chat selecionado será eliminado." },
+  "chat_delete_dialog_body_named": {
+    "message": "O chat \"$1\" será eliminado, incluindo os pedidos, respostas e feedback. Pretende continuar?"
+  },
+  "chat_delete_dialog_confirm": { "message": "Eliminar" },
+  "chat_delete_dialog_cancel": { "message": "Cancelar" }
+}

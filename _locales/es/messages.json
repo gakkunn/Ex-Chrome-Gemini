@@ -1,0 +1,107 @@
+{
+  "ext_name": { "message": "Gemini Shortcut Effective Extension" },
+  "ext_short_name": { "message": "Gemini Shortcut Extension" },
+  "ext_description": {
+    "message": "Envío más seguro, desplazamiento estilo Vim, cambios de modelo, chats temporales y una interfaz limpia para Gemini."
+  },
+  "html_lang": { "message": "es" },
+  "popup_section_feature_toggles": { "message": "Opciones de funciones" },
+  "popup_section_shortcuts": { "message": "Atajos" },
+  "popup_loading": { "message": "Cargando…" },
+  "popup_load_error": {
+    "message": "No se pudieron cargar los ajustes. Vuelve a cargar la extensión."
+  },
+  "popup_settings_unavailable": { "message": "No se pudieron cargar los ajustes." },
+  "popup_toggle_label_vim_scroll": { "message": "Desplazamiento estilo Vim" },
+  "popup_toggle_label_wide_screen": { "message": "Pantalla ancha (UI limpia + enfoque)" },
+  "popup_toggle_label_safe_send": { "message": "Enviar con Cmd/Ctrl + Enter" },
+  "popup_toggle_label_other_shortcuts": { "message": "Otros atajos" },
+  "popup_toggle_enable_success": { "message": "\"$1\" se ha activado." },
+  "popup_toggle_disable_success": { "message": "\"$1\" se ha desactivado." },
+  "popup_toggle_save_error": {
+    "message": "No se pudo guardar el interruptor. Inténtalo de nuevo."
+  },
+  "popup_reset_button": { "message": "Restablecer" },
+  "popup_resetting": { "message": "Restableciendo…" },
+  "popup_reset_success": {
+    "message": "Todos los ajustes volvieron a los valores predeterminados."
+  },
+  "popup_reset_error": { "message": "No se pudo restablecer. Inténtalo de nuevo." },
+  "popup_shortcut_placeholder": { "message": "Presiona las teclas" },
+  "popup_shortcut_conflict_user": {
+    "message": "\"$1\" ya está asignado a \"$2\". Elige otra combinación."
+  },
+  "popup_shortcut_conflict_gemini": {
+    "message": "\"$1\" puede entrar en conflicto con el atajo predeterminado \"$2\" de Gemini. Es posible que el valor predeterminado no funcione."
+  },
+  "error_shortcut_requires_modifier": {
+    "message": "\"$1\" debe combinarse con una tecla modificadora.",
+    "description": "Shown when a disallowed single key is used without modifiers."
+  },
+  "error_shortcut_forbidden_key": {
+    "message": "\"$1\" no puede usarse como atajo.",
+    "description": "Shown when a key is not allowed at all."
+  },
+  "popup_shortcut_error_disallowed_key": {
+    "message": "\"$1\" cannot be used as a shortcut key."
+  },
+  "popup_shortcut_error_modifier_required": {
+    "message": "\"$1\" requires a modifier key (Ctrl/Cmd/Alt/Shift)."
+  },
+  "popup_shortcut_success": { "message": "Se actualizó el atajo de \"$1\"." },
+  "popup_shortcut_error": { "message": "No se pudo guardar el atajo. Inténtalo de nuevo." },
+  "popup_shortcut_empty_state": {
+    "message": "No hay atajos activos. Activa un interruptor para gestionarlos."
+  },
+  "keyboard_label_ctrl": { "message": "Ctrl" },
+  "keyboard_label_cmd": { "message": "Cmd" },
+  "keyboard_label_alt": { "message": "Alt" },
+  "keyboard_label_shift": { "message": "Shift" },
+  "keyboard_label_space": { "message": "Espacio" },
+  "shortcuts_section_gemini_defaults": { "message": "Predeterminados de Gemini" },
+  "shortcuts_section_settings": { "message": "Ajustes" },
+  "shortcuts_section_vim_scroll": { "message": "Desplazamiento Vim" },
+  "shortcuts_section_wide_screen": { "message": "Pantalla ancha" },
+  "shortcuts_section_model_switching": { "message": "Cambio de modelo" },
+  "shortcuts_section_other": { "message": "Otros" },
+  "shortcuts_item_open_settings": { "message": "Abrir ajustes" },
+  "shortcuts_action_open_settings_link": { "message": "Abrir" },
+  "shortcuts_dialog_title": { "message": "Atajos de teclado" },
+  "shortcuts_dialog_close": { "message": "Cerrar" },
+  "shortcut_label_scroll_top": { "message": "Desplazar al inicio" },
+  "shortcut_label_scroll_bottom": { "message": "Desplazar al final" },
+  "shortcut_label_scroll_up": { "message": "Desplazar hacia arriba" },
+  "shortcut_label_scroll_down": { "message": "Desplazar hacia abajo" },
+  "shortcut_label_scroll_half_up": { "message": "Desplazar media página arriba" },
+  "shortcut_label_scroll_half_down": { "message": "Desplazar media página abajo" },
+  "shortcut_label_toggle_focus": { "message": "Alternar foco" },
+  "shortcut_label_toggle_model": { "message": "Alternar selector de modelo" },
+  "shortcut_label_mode_instant": { "message": "Establecer modo: Instant" },
+  "shortcut_label_mode_thinking": { "message": "Establecer modo: Thinking" },
+  "shortcut_label_temporary_chat": { "message": "Abrir chat temporal" },
+  "shortcut_label_toggle_shortcuts": { "message": "Alternar lista de atajos" },
+  "shortcut_label_delete_chat": { "message": "Eliminar chat" },
+  "shortcut_label_upload_files": { "message": "Subir archivos" },
+  "shortcut_label_pin_chat": { "message": "Fijar chat" },
+  "gemini_default_shortcut_new_chat": { "message": "Nuevo chat" },
+  "gemini_default_shortcut_search": { "message": "Buscar" },
+  "gemini_default_shortcut_toggle_sidebar": { "message": "Alternar barra lateral" },
+  "toast_no_chat_selected": { "message": "No hay ningún chat seleccionado." },
+  "toast_pin_failed": { "message": "No se pudo fijar el chat." },
+  "toast_temp_chat_failed": {
+    "message": "No se pudo abrir un chat temporal. Vuelve a cargar la página."
+  },
+  "toast_delete_failed": { "message": "No se pudo eliminar el chat." },
+  "toast_send_button_missing": { "message": "No se encontró el botón Enviar." },
+  "toast_upload_failed": { "message": "No se pudo abrir el menú de carga." },
+  "toast_gem_create_failed": {
+    "message": "No se pudo abrir la página de creación de Gems. Vuelve a cargar la página."
+  },
+  "chat_delete_dialog_title": { "message": "¿Eliminar chat?" },
+  "chat_delete_dialog_body_generic": { "message": "Se eliminará el chat seleccionado." },
+  "chat_delete_dialog_body_named": {
+    "message": "Se eliminará el chat \"$1\", incluidos los mensajes y comentarios. ¿Quieres continuar?"
+  },
+  "chat_delete_dialog_confirm": { "message": "Eliminar" },
+  "chat_delete_dialog_cancel": { "message": "Cancelar" }
+}

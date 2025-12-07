@@ -1,0 +1,107 @@
+{
+  "ext_name": { "message": "Gemini Shortcut Effective Extension" },
+  "ext_short_name": { "message": "Gemini Shortcut Extension" },
+  "ext_description": {
+    "message": "安全な送信、Vim 風スクロール、モデル切り替え、一時チャット、そして Gemini 向けのクリーンな UI。"
+  },
+  "html_lang": { "message": "ja" },
+  "popup_section_feature_toggles": { "message": "機能トグル" },
+  "popup_section_shortcuts": { "message": "ショートカット" },
+  "popup_loading": { "message": "読み込み中です…" },
+  "popup_load_error": {
+    "message": "設定の読み込みに失敗しました。拡張機能を再読み込みしてください。"
+  },
+  "popup_settings_unavailable": { "message": "設定を読み込めませんでした。" },
+  "popup_toggle_label_vim_scroll": { "message": "Vim 風スクロール" },
+  "popup_toggle_label_wide_screen": { "message": "ワイド画面（クリーン UI + フォーカス）" },
+  "popup_toggle_label_safe_send": { "message": "Cmd/Ctrl + Enter 送信" },
+  "popup_toggle_label_other_shortcuts": { "message": "その他のショートカット" },
+  "popup_toggle_enable_success": { "message": "「$1」を有効にしました。" },
+  "popup_toggle_disable_success": { "message": "「$1」を無効にしました。" },
+  "popup_toggle_save_error": { "message": "トグルの保存に失敗しました。もう一度お試しください。" },
+  "popup_reset_button": { "message": "リセット" },
+  "popup_resetting": { "message": "リセット中…" },
+  "popup_reset_success": { "message": "すべての設定を初期状態に戻しました。" },
+  "popup_reset_error": { "message": "リセットに失敗しました。もう一度お試しください。" },
+  "popup_shortcut_placeholder": { "message": "キーを押してください" },
+  "popup_shortcut_conflict_user": {
+    "message": "「$1」は既に「$2」に割り当てられています。別のキーを選んでください。"
+  },
+  "popup_shortcut_conflict_gemini": {
+    "message": "「$1」は Gemini 既定の「$2」と競合する可能性があります。既定の操作が動作しない場合があります。"
+  },
+  "error_shortcut_requires_modifier": {
+    "message": "「$1」は修飾キーと組み合わせてください。",
+    "description": "Shown when a disallowed single key is used without modifiers."
+  },
+  "error_shortcut_forbidden_key": {
+    "message": "「$1」はショートカットとして使用できません。",
+    "description": "Shown when a key is not allowed at all."
+  },
+  "popup_shortcut_error_disallowed_key": {
+    "message": "「$1」はショートカットとして使用できません。",
+    "description": "禁止されたキーまたは組み合わせを選択した際のエラーメッセージ。"
+  },
+  "popup_shortcut_error_modifier_required": {
+    "message": "「$1」は修飾キー（Ctrl/Cmd/Alt/Shift）との組み合わせが必要です。",
+    "description": "修飾キーなしでは登録できないキーを単体で選択した際のエラーメッセージ。"
+  },
+  "popup_shortcut_success": { "message": "「$1」のショートカットを更新しました。" },
+  "popup_shortcut_error": {
+    "message": "ショートカットの保存に失敗しました。もう一度お試しください。"
+  },
+  "popup_shortcut_empty_state": {
+    "message": "有効なショートカットがありません。トグルをオンにして管理してください。"
+  },
+  "keyboard_label_ctrl": { "message": "Ctrl" },
+  "keyboard_label_cmd": { "message": "Cmd" },
+  "keyboard_label_alt": { "message": "Alt" },
+  "keyboard_label_shift": { "message": "Shift" },
+  "keyboard_label_space": { "message": "スペース" },
+  "shortcuts_section_gemini_defaults": { "message": "Gemini 既定" },
+  "shortcuts_section_settings": { "message": "設定" },
+  "shortcuts_section_vim_scroll": { "message": "Vim スクロール" },
+  "shortcuts_section_wide_screen": { "message": "ワイド画面" },
+  "shortcuts_section_model_switching": { "message": "モデル切り替え" },
+  "shortcuts_section_other": { "message": "その他" },
+  "shortcuts_item_open_settings": { "message": "設定を開く" },
+  "shortcuts_action_open_settings_link": { "message": "開く" },
+  "shortcuts_dialog_title": { "message": "キーボードショートカット" },
+  "shortcuts_dialog_close": { "message": "閉じる" },
+  "shortcut_label_scroll_top": { "message": "トップへスクロール" },
+  "shortcut_label_scroll_bottom": { "message": "最下部へスクロール" },
+  "shortcut_label_scroll_up": { "message": "上へスクロール" },
+  "shortcut_label_scroll_down": { "message": "下へスクロール" },
+  "shortcut_label_scroll_half_up": { "message": "半ページ上へスクロール" },
+  "shortcut_label_scroll_half_down": { "message": "半ページ下へスクロール" },
+  "shortcut_label_toggle_focus": { "message": "フォーカスを切り替え" },
+  "shortcut_label_toggle_model": { "message": "モデルセレクターを切り替え" },
+  "shortcut_label_mode_instant": { "message": "モードをインスタントに設定" },
+  "shortcut_label_mode_thinking": { "message": "モードをシンキングに設定" },
+  "shortcut_label_temporary_chat": { "message": "一時チャットを開く" },
+  "shortcut_label_toggle_shortcuts": { "message": "ショートカット一覧を切り替え" },
+  "shortcut_label_delete_chat": { "message": "チャットを削除" },
+  "shortcut_label_upload_files": { "message": "ファイルをアップロード" },
+  "shortcut_label_pin_chat": { "message": "チャットをピン留め" },
+  "gemini_default_shortcut_new_chat": { "message": "新しいチャット" },
+  "gemini_default_shortcut_search": { "message": "検索" },
+  "gemini_default_shortcut_toggle_sidebar": { "message": "サイドバーを切り替え" },
+  "toast_no_chat_selected": { "message": "選択されているチャットがありません。" },
+  "toast_pin_failed": { "message": "チャットのピン留めに失敗しました。" },
+  "toast_temp_chat_failed": {
+    "message": "一時チャットを開けませんでした。ページを再読み込みしてください。"
+  },
+  "toast_delete_failed": { "message": "チャットの削除に失敗しました。" },
+  "toast_send_button_missing": { "message": "送信ボタンが見つかりません。" },
+  "toast_upload_failed": { "message": "アップロードメニューを開けませんでした。" },
+  "toast_gem_create_failed": {
+    "message": "Gem 作成ページを開けませんでした。ページを再読み込みしてください。"
+  },
+  "chat_delete_dialog_title": { "message": "チャットを削除しますか？" },
+  "chat_delete_dialog_body_generic": { "message": "現在選択中のチャットを削除します。" },
+  "chat_delete_dialog_body_named": {
+    "message": "「$1」のチャットを削除します。プロンプトや回答、フィードバックも含めて削除されます。続行しますか？"
+  },
+  "chat_delete_dialog_confirm": { "message": "削除" },
+  "chat_delete_dialog_cancel": { "message": "キャンセル" }
+}

@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "Gemini Shortcut Effective Extension",
+    "description": "Extension display name."
+  },
+  "ext_short_name": {
+    "message": "Gemini Shortcut Extension",
+    "description": "Short extension display name."
+  },
+  "ext_description": {
+    "message": "Safer send, vim-like scroll, model toggles, temporary chats, and clean UI for Gemini.",
+    "description": "Short description shown in the Chrome Web Store and extension list."
+  },
+  "html_lang": {
+    "message": "en",
+    "description": "Language code applied to the popup HTML tag."
+  },
+  "popup_section_feature_toggles": {
+    "message": "Feature Toggles",
+    "description": "Heading for the feature toggles section in the popup."
+  },
+  "popup_section_shortcuts": {
+    "message": "Shortcuts",
+    "description": "Heading for the shortcuts section in the popup."
+  },
+  "popup_loading": {
+    "message": "Loading…",
+    "description": "Shown while popup data is loading."
+  },
+  "popup_load_error": {
+    "message": "Failed to load settings. Please reload the extension.",
+    "description": "Error shown when loading settings fails."
+  },
+  "popup_settings_unavailable": {
+    "message": "Unable to load settings.",
+    "description": "Fallback message when no settings are available."
+  },
+  "popup_toggle_label_vim_scroll": {
+    "message": "Vim-like Scroll",
+    "description": "Label for the Vim-like Scroll toggle."
+  },
+  "popup_toggle_label_wide_screen": {
+    "message": "Wide Screen (Clean UI + Focus)",
+    "description": "Label for the Wide Screen toggle."
+  },
+  "popup_toggle_label_safe_send": {
+    "message": "Send with Cmd/Ctrl + Enter",
+    "description": "Label for the safe send toggle."
+  },
+  "popup_toggle_label_other_shortcuts": {
+    "message": "Other Shortcuts",
+    "description": "Label for the miscellaneous shortcuts toggle."
+  },
+  "popup_toggle_enable_success": {
+    "message": "\"$1\" has been enabled.",
+    "description": "Success toast after enabling a feature toggle. $1 is the feature name."
+  },
+  "popup_toggle_disable_success": {
+    "message": "\"$1\" has been disabled.",
+    "description": "Success toast after disabling a feature toggle. $1 is the feature name."
+  },
+  "popup_toggle_save_error": {
+    "message": "Failed to save the toggle. Please try again.",
+    "description": "Error toast when saving a toggle fails."
+  },
+  "popup_reset_button": {
+    "message": "Reset",
+    "description": "Label for the reset button."
+  },
+  "popup_resetting": {
+    "message": "Resetting…",
+    "description": "Text shown on the reset button while processing."
+  },
+  "popup_reset_success": {
+    "message": "All settings have been restored to defaults.",
+    "description": "Success toast after resetting settings."
+  },
+  "popup_reset_error": {
+    "message": "Failed to reset settings. Please try again.",
+    "description": "Error toast when resetting settings fails."
+  },
+  "popup_shortcut_placeholder": {
+    "message": "Press keys",
+    "description": "Placeholder text in the shortcut input."
+  },
+  "popup_shortcut_conflict_user": {
+    "message": "\"$1\" is already assigned to \"$2\". Please choose a different key.",
+    "description": "Error message when a shortcut conflicts with another user shortcut. $1 is the binding, $2 is the conflicting shortcut name."
+  },
+  "popup_shortcut_conflict_gemini": {
+    "message": "\"$1\" conflicts with Gemini's default \"$2\" shortcut. The default may not work as expected.",
+    "description": "Warning message when a shortcut conflicts with a Gemini default shortcut. $1 is the binding, $2 is the Gemini shortcut label."
+  },
+  "error_shortcut_requires_modifier": {
+    "message": "\"$1\" must be combined with a modifier key.",
+    "description": "Shown when a disallowed single key is used without modifiers."
+  },
+  "error_shortcut_forbidden_key": {
+    "message": "\"$1\" cannot be used as a shortcut.",
+    "description": "Shown when a key is not allowed at all."
+  },
+  "popup_shortcut_error_disallowed_key": {
+    "message": "\"$1\" cannot be used as a shortcut key.",
+    "description": "Error message when a key or combination is disallowed."
+  },
+  "popup_shortcut_error_modifier_required": {
+    "message": "\"$1\" requires a modifier key (Ctrl/Cmd/Alt/Shift).",
+    "description": "Error message when a key must be combined with modifiers."
+  },
+  "popup_shortcut_success": {
+    "message": "Shortcut for \"$1\" has been updated.",
+    "description": "Success toast after saving a shortcut. $1 is the shortcut name."
+  },
+  "popup_shortcut_error": {
+    "message": "Failed to save the shortcut. Please try again.",
+    "description": "Error toast when saving a shortcut fails."
+  },
+  "popup_shortcut_empty_state": {
+    "message": "No shortcuts are enabled. Turn on a toggle to manage shortcuts.",
+    "description": "Info message shown when no shortcuts are available."
+  },
+  "keyboard_label_ctrl": {
+    "message": "Ctrl",
+    "description": "Label for the Control modifier key."
+  },
+  "keyboard_label_cmd": {
+    "message": "Cmd",
+    "description": "Label for the Command modifier key."
+  },
+  "keyboard_label_alt": {
+    "message": "Alt",
+    "description": "Label for the Alt modifier key."
+  },
+  "keyboard_label_shift": {
+    "message": "Shift",
+    "description": "Label for the Shift modifier key."
+  },
+  "keyboard_label_space": {
+    "message": "Space",
+    "description": "Label for the Space key."
+  },
+  "shortcuts_section_gemini_defaults": {
+    "message": "Gemini Defaults",
+    "description": "Section title for Gemini default shortcuts."
+  },
+  "shortcuts_section_settings": {
+    "message": "Settings",
+    "description": "Section title for settings shortcuts."
+  },
+  "shortcuts_section_vim_scroll": {
+    "message": "Vim Scroll",
+    "description": "Section title for Vim scroll shortcuts."
+  },
+  "shortcuts_section_wide_screen": {
+    "message": "Wide Screen",
+    "description": "Section title for wide screen shortcuts."
+  },
+  "shortcuts_section_model_switching": {
+    "message": "Model Switching",
+    "description": "Section title for model switching shortcuts."
+  },
+  "shortcuts_section_other": {
+    "message": "Other",
+    "description": "Section title for miscellaneous shortcuts."
+  },
+  "shortcuts_item_open_settings": {
+    "message": "Open Settings",
+    "description": "Label for the shortcut item that opens settings."
+  },
+  "shortcuts_action_open_settings_link": {
+    "message": "Open",
+    "description": "Text for the action link that opens settings."
+  },
+  "shortcuts_dialog_title": {
+    "message": "Keyboard shortcuts",
+    "description": "Title for the shortcuts dialog."
+  },
+  "shortcuts_dialog_close": {
+    "message": "Close",
+    "description": "Aria label and tooltip for the dialog close button."
+  },
+  "shortcut_label_scroll_top": {
+    "message": "Scroll to Top",
+    "description": "Label for the Scroll to Top shortcut."
+  },
+  "shortcut_label_scroll_bottom": {
+    "message": "Scroll to Bottom",
+    "description": "Label for the Scroll to Bottom shortcut."
+  },
+  "shortcut_label_scroll_up": {
+    "message": "Scroll Up",
+    "description": "Label for the Scroll Up shortcut."
+  },
+  "shortcut_label_scroll_down": {
+    "message": "Scroll Down",
+    "description": "Label for the Scroll Down shortcut."
+  },
+  "shortcut_label_scroll_half_up": {
+    "message": "Scroll Half Page Up",
+    "description": "Label for the Scroll Half Page Up shortcut."
+  },
+  "shortcut_label_scroll_half_down": {
+    "message": "Scroll Half Page Down",
+    "description": "Label for the Scroll Half Page Down shortcut."
+  },
+  "shortcut_label_toggle_focus": {
+    "message": "Toggle Focus",
+    "description": "Label for the Toggle Focus shortcut."
+  },
+  "shortcut_label_toggle_model": {
+    "message": "Toggle Model Selector",
+    "description": "Label for the Toggle Model shortcut."
+  },
+  "shortcut_label_mode_instant": {
+    "message": "Set Mode: Instant",
+    "description": "Label for the Set Mode: Instant shortcut."
+  },
+  "shortcut_label_mode_thinking": {
+    "message": "Set Mode: Thinking",
+    "description": "Label for the Set Mode: Thinking shortcut."
+  },
+  "shortcut_label_temporary_chat": {
+    "message": "Open Temporary Chat",
+    "description": "Label for the Open Temporary Chat shortcut."
+  },
+  "shortcut_label_toggle_shortcuts": {
+    "message": "Toggle Shortcuts List",
+    "description": "Label for the Toggle Shortcuts List shortcut."
+  },
+  "shortcut_label_delete_chat": {
+    "message": "Delete Chat",
+    "description": "Label for the Delete Chat shortcut."
+  },
+  "shortcut_label_upload_files": {
+    "message": "Upload Files",
+    "description": "Label for the Upload Files shortcut."
+  },
+  "shortcut_label_pin_chat": {
+    "message": "Pin Chat",
+    "description": "Label for the Pin Chat shortcut."
+  },
+  "gemini_default_shortcut_new_chat": {
+    "message": "New chat",
+    "description": "Gemini default shortcut label for starting a new chat."
+  },
+  "gemini_default_shortcut_search": {
+    "message": "Search",
+    "description": "Gemini default shortcut label for search."
+  },
+  "gemini_default_shortcut_toggle_sidebar": {
+    "message": "Toggle Side Bar",
+    "description": "Gemini default shortcut label for toggling the sidebar."
+  },
+  "toast_no_chat_selected": {
+    "message": "No chat is currently selected.",
+    "description": "Toast shown when no chat is selected."
+  },
+  "toast_pin_failed": {
+    "message": "Failed to pin chat.",
+    "description": "Toast shown when pinning a chat fails."
+  },
+  "toast_temp_chat_failed": {
+    "message": "Could not open a temporary chat. Please reload the page.",
+    "description": "Toast shown when opening a temporary chat fails."
+  },
+  "toast_delete_failed": {
+    "message": "Failed to delete chat.",
+    "description": "Toast shown when deleting a chat fails."
+  },
+  "toast_send_button_missing": {
+    "message": "Send button not found.",
+    "description": "Toast shown when the send button cannot be located."
+  },
+  "toast_upload_failed": {
+    "message": "Could not open the upload menu.",
+    "description": "Toast shown when the upload menu cannot be opened."
+  },
+  "toast_gem_create_failed": {
+    "message": "Could not open Gem creation. Please reload the page.",
+    "description": "Toast shown when the Gem creation page cannot be opened."
+  },
+  "chat_delete_dialog_title": {
+    "message": "Delete chat?",
+    "description": "Title of the custom delete chat confirmation dialog."
+  },
+  "chat_delete_dialog_body_generic": {
+    "message": "This will delete the currently selected chat.",
+    "description": "Generic body text for the delete chat dialog when the chat title is unknown."
+  },
+  "chat_delete_dialog_body_named": {
+    "message": "This will delete the chat \"$1\", including prompts, responses, and feedback. Continue?",
+    "description": "Body text for the delete chat dialog when the chat title is known. $1 is the chat title."
+  },
+  "chat_delete_dialog_confirm": {
+    "message": "Delete",
+    "description": "Confirm button text in the delete chat dialog."
+  },
+  "chat_delete_dialog_cancel": {
+    "message": "Cancel",
+    "description": "Cancel button text in the delete chat dialog."
+  }
+}

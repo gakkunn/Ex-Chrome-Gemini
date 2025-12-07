@@ -1,0 +1,109 @@
+{
+  "ext_name": { "message": "Gemini Shortcut Effective Extension" },
+  "ext_short_name": { "message": "Gemini Shortcut Extension" },
+  "ext_description": {
+    "message": "Sichereres Senden, Vim-ähnliches Scrollen, Modellumschaltung, temporäre Chats und aufgeräumtes UI für Gemini."
+  },
+  "html_lang": { "message": "de" },
+  "popup_section_feature_toggles": { "message": "Funktionsschalter" },
+  "popup_section_shortcuts": { "message": "Kurzbefehle" },
+  "popup_loading": { "message": "Wird geladen…" },
+  "popup_load_error": {
+    "message": "Einstellungen konnten nicht geladen werden. Bitte laden Sie die Erweiterung neu."
+  },
+  "popup_settings_unavailable": { "message": "Einstellungen konnten nicht geladen werden." },
+  "popup_toggle_label_vim_scroll": { "message": "Scrollen im Vim-Stil" },
+  "popup_toggle_label_wide_screen": { "message": "Breitbild (aufgeräumtes UI + Fokus)" },
+  "popup_toggle_label_safe_send": { "message": "Mit Cmd/Ctrl + Enter senden" },
+  "popup_toggle_label_other_shortcuts": { "message": "Weitere Kurzbefehle" },
+  "popup_toggle_enable_success": { "message": "„$1“ wurde aktiviert." },
+  "popup_toggle_disable_success": { "message": "„$1“ wurde deaktiviert." },
+  "popup_toggle_save_error": {
+    "message": "Der Schalter konnte nicht gespeichert werden. Bitte erneut versuchen."
+  },
+  "popup_reset_button": { "message": "Zurücksetzen" },
+  "popup_resetting": { "message": "Wird zurückgesetzt…" },
+  "popup_reset_success": {
+    "message": "Alle Einstellungen wurden auf die Standardwerte zurückgesetzt."
+  },
+  "popup_reset_error": { "message": "Zurücksetzen fehlgeschlagen. Bitte erneut versuchen." },
+  "popup_shortcut_placeholder": { "message": "Tasten drücken" },
+  "popup_shortcut_conflict_user": {
+    "message": "„$1“ ist bereits „$2“ zugewiesen. Bitte eine andere Kombination wählen."
+  },
+  "popup_shortcut_conflict_gemini": {
+    "message": "„$1“ kollidiert möglicherweise mit dem Gemini-Standardkurzbefehl „$2“. Der Standard funktioniert dann eventuell nicht."
+  },
+  "error_shortcut_requires_modifier": {
+    "message": "\"$1\" muss mit einer Modifikatortaste kombiniert werden.",
+    "description": "Shown when a disallowed single key is used without modifiers."
+  },
+  "error_shortcut_forbidden_key": {
+    "message": "\"$1\" kann nicht als Kurzbefehl verwendet werden.",
+    "description": "Shown when a key is not allowed at all."
+  },
+  "popup_shortcut_error_disallowed_key": {
+    "message": "\"$1\" cannot be used as a shortcut key."
+  },
+  "popup_shortcut_error_modifier_required": {
+    "message": "\"$1\" requires a modifier key (Ctrl/Cmd/Alt/Shift)."
+  },
+  "popup_shortcut_success": { "message": "Der Kurzbefehl für „$1“ wurde aktualisiert." },
+  "popup_shortcut_error": {
+    "message": "Kurzbefehl konnte nicht gespeichert werden. Bitte erneut versuchen."
+  },
+  "popup_shortcut_empty_state": {
+    "message": "Keine Kurzbefehle aktiviert. Aktivieren Sie einen Schalter, um sie zu verwalten."
+  },
+  "keyboard_label_ctrl": { "message": "Ctrl" },
+  "keyboard_label_cmd": { "message": "Cmd" },
+  "keyboard_label_alt": { "message": "Alt" },
+  "keyboard_label_shift": { "message": "Shift" },
+  "keyboard_label_space": { "message": "Leertaste" },
+  "shortcuts_section_gemini_defaults": { "message": "Gemini-Standards" },
+  "shortcuts_section_settings": { "message": "Einstellungen" },
+  "shortcuts_section_vim_scroll": { "message": "Vim-Scrollen" },
+  "shortcuts_section_wide_screen": { "message": "Breitbild" },
+  "shortcuts_section_model_switching": { "message": "Modellwechsel" },
+  "shortcuts_section_other": { "message": "Weitere" },
+  "shortcuts_item_open_settings": { "message": "Einstellungen öffnen" },
+  "shortcuts_action_open_settings_link": { "message": "Öffnen" },
+  "shortcuts_dialog_title": { "message": "Tastenkürzel" },
+  "shortcuts_dialog_close": { "message": "Schließen" },
+  "shortcut_label_scroll_top": { "message": "Nach oben scrollen" },
+  "shortcut_label_scroll_bottom": { "message": "Nach unten scrollen" },
+  "shortcut_label_scroll_up": { "message": "Aufwärts scrollen" },
+  "shortcut_label_scroll_down": { "message": "Abwärts scrollen" },
+  "shortcut_label_scroll_half_up": { "message": "Eine halbe Seite nach oben scrollen" },
+  "shortcut_label_scroll_half_down": { "message": "Eine halbe Seite nach unten scrollen" },
+  "shortcut_label_toggle_focus": { "message": "Fokus umschalten" },
+  "shortcut_label_toggle_model": { "message": "Modellwahl umschalten" },
+  "shortcut_label_mode_instant": { "message": "Modus auf Instant setzen" },
+  "shortcut_label_mode_thinking": { "message": "Modus auf Thinking setzen" },
+  "shortcut_label_temporary_chat": { "message": "Temporären Chat öffnen" },
+  "shortcut_label_toggle_shortcuts": { "message": "Liste der Kurzbefehle umschalten" },
+  "shortcut_label_delete_chat": { "message": "Chat löschen" },
+  "shortcut_label_upload_files": { "message": "Dateien hochladen" },
+  "shortcut_label_pin_chat": { "message": "Chat anheften" },
+  "gemini_default_shortcut_new_chat": { "message": "Neuer Chat" },
+  "gemini_default_shortcut_search": { "message": "Suchen" },
+  "gemini_default_shortcut_toggle_sidebar": { "message": "Seitenleiste umschalten" },
+  "toast_no_chat_selected": { "message": "Kein Chat ausgewählt." },
+  "toast_pin_failed": { "message": "Chat konnte nicht angeheftet werden." },
+  "toast_temp_chat_failed": {
+    "message": "Temporärer Chat konnte nicht geöffnet werden. Bitte die Seite neu laden."
+  },
+  "toast_delete_failed": { "message": "Chat konnte nicht gelöscht werden." },
+  "toast_send_button_missing": { "message": "Senden-Schaltfläche nicht gefunden." },
+  "toast_upload_failed": { "message": "Upload-Menü konnte nicht geöffnet werden." },
+  "toast_gem_create_failed": {
+    "message": "Gems-Erstellungsseite konnte nicht geöffnet werden. Bitte die Seite neu laden."
+  },
+  "chat_delete_dialog_title": { "message": "Chat löschen?" },
+  "chat_delete_dialog_body_generic": { "message": "Der ausgewählte Chat wird gelöscht." },
+  "chat_delete_dialog_body_named": {
+    "message": "Der Chat „$1“ wird einschließlich Eingaben, Antworten und Feedback gelöscht. Fortfahren?"
+  },
+  "chat_delete_dialog_confirm": { "message": "Löschen" },
+  "chat_delete_dialog_cancel": { "message": "Abbrechen" }
+}

@@ -1,0 +1,93 @@
+{
+  "ext_name": { "message": "Gemini Shortcut Effective Extension" },
+  "ext_short_name": { "message": "Gemini Shortcut Extension" },
+  "ext_description": {
+    "message": "更安全的发送、Vim 风格滚动、模型切换、临时聊天，以及适用于 Gemini 的简洁界面。"
+  },
+  "html_lang": { "message": "zh-CN" },
+  "popup_section_feature_toggles": { "message": "功能开关" },
+  "popup_section_shortcuts": { "message": "快捷键" },
+  "popup_loading": { "message": "正在加载…" },
+  "popup_load_error": { "message": "无法加载设置。请重新加载扩展程序。" },
+  "popup_settings_unavailable": { "message": "无法加载设置。" },
+  "popup_toggle_label_vim_scroll": { "message": "Vim 风格滚动" },
+  "popup_toggle_label_wide_screen": { "message": "宽屏（简洁界面 + 聚焦）" },
+  "popup_toggle_label_safe_send": { "message": "Cmd/Ctrl + Enter 发送" },
+  "popup_toggle_label_other_shortcuts": { "message": "其他快捷键" },
+  "popup_toggle_enable_success": { "message": "“$1”已启用。" },
+  "popup_toggle_disable_success": { "message": "“$1”已禁用。" },
+  "popup_toggle_save_error": { "message": "无法保存该开关。请重试。" },
+  "popup_reset_button": { "message": "重置" },
+  "popup_resetting": { "message": "正在重置…" },
+  "popup_reset_success": { "message": "已将所有设置恢复为默认值。" },
+  "popup_reset_error": { "message": "重置失败。请重试。" },
+  "popup_shortcut_placeholder": { "message": "请按键" },
+  "popup_shortcut_conflict_user": { "message": "“$1”已分配给“$2”。请选择其他按键。" },
+  "popup_shortcut_conflict_gemini": {
+    "message": "“$1”可能与 Gemini 的默认“$2”快捷键冲突，默认操作可能无法生效。"
+  },
+  "error_shortcut_requires_modifier": {
+    "message": "“$1” 必须与修饰键组合使用。",
+    "description": "Shown when a disallowed single key is used without modifiers."
+  },
+  "error_shortcut_forbidden_key": {
+    "message": "“$1” 不能用作快捷键。",
+    "description": "Shown when a key is not allowed at all."
+  },
+  "popup_shortcut_error_disallowed_key": {
+    "message": "\"$1\" cannot be used as a shortcut key."
+  },
+  "popup_shortcut_error_modifier_required": {
+    "message": "\"$1\" requires a modifier key (Ctrl/Cmd/Alt/Shift)."
+  },
+  "popup_shortcut_success": { "message": "已更新“$1”的快捷键。" },
+  "popup_shortcut_error": { "message": "无法保存快捷键。请重试。" },
+  "popup_shortcut_empty_state": { "message": "尚未启用任何快捷键。请开启相应开关后再管理。" },
+  "keyboard_label_ctrl": { "message": "Ctrl" },
+  "keyboard_label_cmd": { "message": "Cmd" },
+  "keyboard_label_alt": { "message": "Alt" },
+  "keyboard_label_shift": { "message": "Shift" },
+  "keyboard_label_space": { "message": "空格" },
+  "shortcuts_section_gemini_defaults": { "message": "Gemini 默认" },
+  "shortcuts_section_settings": { "message": "设置" },
+  "shortcuts_section_vim_scroll": { "message": "Vim 滚动" },
+  "shortcuts_section_wide_screen": { "message": "宽屏" },
+  "shortcuts_section_model_switching": { "message": "模型切换" },
+  "shortcuts_section_other": { "message": "其他" },
+  "shortcuts_item_open_settings": { "message": "打开设置" },
+  "shortcuts_action_open_settings_link": { "message": "打开" },
+  "shortcuts_dialog_title": { "message": "键盘快捷键" },
+  "shortcuts_dialog_close": { "message": "关闭" },
+  "shortcut_label_scroll_top": { "message": "滚动到顶部" },
+  "shortcut_label_scroll_bottom": { "message": "滚动到底部" },
+  "shortcut_label_scroll_up": { "message": "向上滚动" },
+  "shortcut_label_scroll_down": { "message": "向下滚动" },
+  "shortcut_label_scroll_half_up": { "message": "向上滚动半页" },
+  "shortcut_label_scroll_half_down": { "message": "向下滚动半页" },
+  "shortcut_label_toggle_focus": { "message": "切换焦点" },
+  "shortcut_label_toggle_model": { "message": "切换模型选择器" },
+  "shortcut_label_mode_instant": { "message": "将模式设为 Instant" },
+  "shortcut_label_mode_thinking": { "message": "将模式设为 Thinking" },
+  "shortcut_label_temporary_chat": { "message": "打开临时聊天" },
+  "shortcut_label_toggle_shortcuts": { "message": "切换快捷键列表" },
+  "shortcut_label_delete_chat": { "message": "删除聊天" },
+  "shortcut_label_upload_files": { "message": "上传文件" },
+  "shortcut_label_pin_chat": { "message": "固定聊天" },
+  "gemini_default_shortcut_new_chat": { "message": "新建聊天" },
+  "gemini_default_shortcut_search": { "message": "搜索" },
+  "gemini_default_shortcut_toggle_sidebar": { "message": "切换侧边栏" },
+  "toast_no_chat_selected": { "message": "当前没有选中的聊天。" },
+  "toast_pin_failed": { "message": "无法固定聊天。" },
+  "toast_temp_chat_failed": { "message": "无法打开临时聊天。请重新加载页面。" },
+  "toast_delete_failed": { "message": "无法删除聊天。" },
+  "toast_send_button_missing": { "message": "找不到发送按钮。" },
+  "toast_upload_failed": { "message": "无法打开上传菜单。" },
+  "toast_gem_create_failed": { "message": "无法打开 Gem 创建页面。请重新加载页面。" },
+  "chat_delete_dialog_title": { "message": "删除聊天？" },
+  "chat_delete_dialog_body_generic": { "message": "这将删除当前选中的聊天。" },
+  "chat_delete_dialog_body_named": {
+    "message": "将删除“$1”聊天，其中包含的提示、回复和反馈也会一并移除。是否继续？"
+  },
+  "chat_delete_dialog_confirm": { "message": "删除" },
+  "chat_delete_dialog_cancel": { "message": "取消" }
+}
