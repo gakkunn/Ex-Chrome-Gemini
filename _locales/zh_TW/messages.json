@@ -83,6 +83,9 @@
   "toast_temp_chat_failed": { "message": "無法開啟暫時聊天，請重新載入頁面。" },
   "toast_delete_failed": { "message": "無法刪除聊天。" },
   "toast_send_button_missing": { "message": "找不到送出按鈕。" },
+  "toast_send_button_disabled": {
+    "message": "送出按鈕暫時被停用。請重新載入頁面。"
+  },
   "toast_upload_failed": { "message": "無法開啟上傳選單。" },
   "toast_gem_create_failed": { "message": "無法開啟 Gem 建立頁面，請重新載入頁面。" },
   "chat_delete_dialog_title": { "message": "要刪除聊天嗎？" },

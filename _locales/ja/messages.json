@@ -93,6 +93,9 @@
   },
   "toast_delete_failed": { "message": "チャットの削除に失敗しました。" },
   "toast_send_button_missing": { "message": "送信ボタンが見つかりません。" },
+  "toast_send_button_disabled": {
+    "message": "Gemini 側で送信ボタンが一時的に無効化されています。リロードしてください。"
+  },
   "toast_upload_failed": { "message": "アップロードメニューを開けませんでした。" },
   "toast_gem_create_failed": {
     "message": "Gem 作成ページを開けませんでした。ページを再読み込みしてください。"

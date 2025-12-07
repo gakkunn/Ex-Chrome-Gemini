@@ -91,6 +91,9 @@
   },
   "toast_delete_failed": { "message": "Não foi possível excluir o chat." },
   "toast_send_button_missing": { "message": "Não foi possível encontrar o botão Enviar." },
+  "toast_send_button_disabled": {
+    "message": "O botão Enviar está temporariamente desativado. Recarregue a página."
+  },
   "toast_upload_failed": { "message": "Não foi possível abrir o menu de envio." },
   "toast_gem_create_failed": {
     "message": "Não foi possível abrir a página de criação de Gems. Recarregue a página."

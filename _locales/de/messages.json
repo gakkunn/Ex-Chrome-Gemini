@@ -95,6 +95,9 @@
   },
   "toast_delete_failed": { "message": "Chat konnte nicht gelöscht werden." },
   "toast_send_button_missing": { "message": "Senden-Schaltfläche nicht gefunden." },
+  "toast_send_button_disabled": {
+    "message": "Die Senden-Schaltfläche ist vorübergehend deaktiviert. Bitte laden Sie die Seite neu."
+  },
   "toast_upload_failed": { "message": "Upload-Menü konnte nicht geöffnet werden." },
   "toast_gem_create_failed": {
     "message": "Gems-Erstellungsseite konnte nicht geöffnet werden. Bitte die Seite neu laden."

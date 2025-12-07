@@ -89,6 +89,9 @@
   },
   "toast_delete_failed": { "message": "채팅을 삭제하지 못했습니다." },
   "toast_send_button_missing": { "message": "보내기 버튼을 찾을 수 없습니다." },
+  "toast_send_button_disabled": {
+    "message": "보내기 버튼이 일시적으로 비활성화되었습니다. 페이지를 새로고침해 주세요."
+  },
   "toast_upload_failed": { "message": "업로드 메뉴를 열 수 없습니다." },
   "toast_gem_create_failed": {
     "message": "Gem 생성 페이지를 열 수 없습니다. 페이지를 새로고침해 주세요."

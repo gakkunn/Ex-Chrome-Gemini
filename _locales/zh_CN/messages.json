@@ -81,6 +81,9 @@
   "toast_temp_chat_failed": { "message": "无法打开临时聊天。请重新加载页面。" },
   "toast_delete_failed": { "message": "无法删除聊天。" },
   "toast_send_button_missing": { "message": "找不到发送按钮。" },
+  "toast_send_button_disabled": {
+    "message": "发送按钮暂时被禁用。请重新加载页面。"
+  },
   "toast_upload_failed": { "message": "无法打开上传菜单。" },
   "toast_gem_create_failed": { "message": "无法打开 Gem 创建页面。请重新加载页面。" },
   "chat_delete_dialog_title": { "message": "删除聊天？" },

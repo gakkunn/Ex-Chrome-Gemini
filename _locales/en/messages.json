@@ -271,6 +271,10 @@
     "message": "Send button not found.",
     "description": "Toast shown when the send button cannot be located."
   },
+  "toast_send_button_disabled": {
+    "message": "Send button is temporarily disabled. Please reload the page.",
+    "description": "Toast shown when the send button exists but is temporarily disabled by Gemini."
+  },
   "toast_upload_failed": {
     "message": "Could not open the upload menu.",
     "description": "Toast shown when the upload menu cannot be opened."
