@@ -95,7 +95,7 @@ npm run dev   # watch build to dist/
 
 ### Test
 
-現在、自動テストはありません。変更後は Chrome での手動確認をお願いします。
+Automated tests are not available yet. Please verify changes manually in Chrome.
 
 ---
 
