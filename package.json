@@ -24,7 +24,7 @@
     "@crxjs/vite-plugin": "^2.2.1",
     "@eslint/js": "^9.39.1",
     "@preact/preset-vite": "^2.10.2",
-    "@types/chrome": "^0.0.260",
+    "@types/chrome": "^0.1.32",
     "@types/node": "^22.9.0",
     "@typescript-eslint/eslint-plugin": "^8.47.0",
     "@typescript-eslint/parser": "^8.47.0",
