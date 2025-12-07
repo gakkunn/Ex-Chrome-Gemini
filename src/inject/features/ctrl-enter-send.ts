@@ -27,19 +27,25 @@ function isEditableTarget(t: EventTarget | null): boolean {
   return false;
 }
 
-function getSendButton(): HTMLElement | null {
+function getSendButton(): { button: HTMLElement | null; disabled: boolean } {
   // Try common selectors first, then fall back to heuristics
   // Note: selector also covers the Japanese "Send" label for locale support
   const candidates = [
-    'button[data-test-id="send-button"]:not([disabled]):not([aria-disabled="true"])',
-    'button[aria-label="Send"]:not([disabled]):not([aria-disabled="true"])',
-    'button[aria-label="Send message"]:not([disabled]):not([aria-disabled="true"])',
-    'button[aria-label*="Send" i]:not([disabled]):not([aria-disabled="true"])',
-    'button[aria-label*="送信"]:not([disabled]):not([aria-disabled="true"])', // Japanese "Send" label (required for locale matching)
+    'button[data-test-id="send-button"]',
+    'button[aria-label="Send"]',
+    'button[aria-label="Send message"]',
+    'button[aria-label*="Send" i]',
+    'button[aria-label*="送信"]', // Japanese "Send" label (required for locale matching)
   ];
+  let disabledMatch: HTMLElement | null = null;
   for (const sel of candidates) {
     const btn = document.querySelector(sel) as HTMLElement | null;
-    if (btn && isVisible(btn)) return btn;
+    if (btn && isVisible(btn)) {
+      const isDisabled =
+        (btn as HTMLButtonElement).disabled || btn.getAttribute('aria-disabled') === 'true';
+      if (!isDisabled) return { button: btn, disabled: false };
+      disabledMatch = disabledMatch ?? btn;
+    }
   }
   // Heuristic: any visible button whose aria-label includes "send"
   const all = document.querySelectorAll('button[aria-label]');
@@ -47,13 +53,15 @@ function getSendButton(): HTMLElement | null {
     const label = (b.getAttribute('aria-label') || '').toLowerCase();
     if (
       label.includes('send') &&
-      !(b as HTMLButtonElement).disabled &&
-      b.getAttribute('aria-disabled') !== 'true' &&
       isVisible(b as HTMLElement)
-    )
-      return b as HTMLElement;
+    ) {
+      const isDisabled =
+        (b as HTMLButtonElement).disabled || b.getAttribute('aria-disabled') === 'true';
+      if (!isDisabled) return { button: b as HTMLElement, disabled: false };
+      disabledMatch = disabledMatch ?? (b as HTMLElement);
+    }
   }
-  return null;
+  return { button: disabledMatch, disabled: !!disabledMatch };
 }
 
 export function handleEnterKey(e: KeyboardEvent): boolean {
@@ -72,9 +80,11 @@ export function handleEnterKey(e: KeyboardEvent): boolean {
     e.preventDefault();
     e.stopPropagation();
     e.stopImmediatePropagation?.();
-    const btn = getSendButton();
-    if (btn) {
+    const { button: btn, disabled } = getSendButton();
+    if (btn && !disabled) {
       btn.click();
+    } else if (disabled) {
+      window.__gxt_utils?.showToast?.(getMessage('toast_send_button_disabled'), 'warning');
     } else {
       console.warn('[Gemini Hotkeys] Send button not found');
       window.__gxt_utils?.showToast?.(getMessage('toast_send_button_missing'), 'error');
