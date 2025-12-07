@@ -18,6 +18,7 @@ function isVisible(el: HTMLElement | null): boolean {
 
 // Track IME composition state more reliably than e.isComposing alone
 const IME: IMEState = { active: false };
+let missingSendLogged = false;
 
 function isEditableTarget(t: EventTarget | null): boolean {
   if (!t || !(t instanceof Element)) return false;
@@ -85,9 +86,10 @@ export function handleEnterKey(e: KeyboardEvent): boolean {
       btn.click();
     } else if (disabled) {
       window.__gxt_utils?.showToast?.(getMessage('toast_send_button_disabled'), 'warning');
-    } else {
-      console.warn('[Gemini Hotkeys] Send button not found');
-      window.__gxt_utils?.showToast?.(getMessage('toast_send_button_missing'), 'error');
+    } else if (!missingSendLogged) {
+      // Only log once per page load to avoid noisy warnings when Gemini hides the button
+      console.debug('[Gemini Hotkeys] Send button not found; skipping send');
+      missingSendLogged = true;
     }
     return true;
   }
