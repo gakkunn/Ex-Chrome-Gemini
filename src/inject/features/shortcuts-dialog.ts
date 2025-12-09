@@ -8,6 +8,7 @@ const POPOVER_ID = 'gxt-shortcuts-popover';
 const STYLE_ID = 'gxt-shortcuts-style';
 const BACKDROP_ID = 'gxt-shortcuts-backdrop';
 const KEYDOWN_CAPTURE_OPTIONS: AddEventListenerOptions = { capture: true, passive: false };
+const NON_PASSIVE_CLICK_OPTIONS: AddEventListenerOptions = { passive: false };
 
 export interface ShortcutItem {
   label: string;
@@ -67,10 +68,14 @@ const combosToDd = (combos: string[][]): HTMLElement => {
 const actionToDd = (label: string, action: () => void): HTMLElement => {
   const dd = el('dd', { class: 'shortcut' });
   const a = el('a', { href: '#', style: 'color: inherit; text-decoration: underline;' }, label);
-  a.addEventListener('click', (e) => {
-    e.preventDefault();
-    action();
-  });
+  a.addEventListener(
+    'click',
+    (e) => {
+      e.preventDefault();
+      action();
+    },
+    NON_PASSIVE_CLICK_OPTIONS
+  );
   dd.appendChild(a);
   return dd;
 };

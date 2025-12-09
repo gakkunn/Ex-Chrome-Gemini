@@ -37,6 +37,7 @@ let state: ExtensionSettings | null = null;
 const togglesContainer = document.getElementById('feature-toggles');
 const shortcutsContainer = document.getElementById('shortcuts-list');
 const resetButton = document.getElementById('reset-button');
+const NON_PASSIVE_KEYDOWN_OPTIONS: AddEventListenerOptions = { capture: true, passive: false };
 
 function formatBinding(binding: KeyBinding): string {
   const normalized = normalizeBindingForPlatform(binding, isMac);
@@ -241,7 +242,7 @@ function renderShortcuts() {
         input.value = formatBindings([binding]);
         await saveSettings({ shortcuts: { [def.id]: [binding] } });
       },
-      { passive: false }
+      NON_PASSIVE_KEYDOWN_OPTIONS
     );
 
     row.appendChild(label);

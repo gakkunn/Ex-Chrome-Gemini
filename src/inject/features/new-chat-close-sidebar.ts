@@ -6,6 +6,8 @@ import { getModLabel, isMacPlatform, isModKey } from '@/shared/keyboard';
 
 import { isFeatureEnabled } from '../state/toggles';
 
+const KEYDOWN_CAPTURE_OPTIONS: AddEventListenerOptions = { capture: true, passive: false };
+
 const isOpen = (): boolean =>
   !!document.querySelector('.conversation-items-container.side-nav-opened');
 
@@ -33,7 +35,7 @@ export function initializeNewChatCloseSidebar(): void {
   const isMac = isMacPlatform();
   const modLabel = getModLabel({ isMac, useSymbol: true });
   if (!window.__gxt_closeSidebarAfterNewChat) {
-    window.addEventListener('keydown', onKeyDown, true);
+    window.addEventListener('keydown', onKeyDown, KEYDOWN_CAPTURE_OPTIONS);
     window.__gxt_closeSidebarAfterNewChat = true;
     console.log(`[Gemini Hotkeys] ⇧${modLabel}O new chat hook to close sidebar bound`);
   }

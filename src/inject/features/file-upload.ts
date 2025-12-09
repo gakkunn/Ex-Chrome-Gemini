@@ -8,6 +8,7 @@ import { getModLabel, isMacPlatform, isModKey } from '@/shared/keyboard';
 import { isFeatureEnabled } from '../state/toggles';
 
 const KEYDOWN_CAPTURE_OPTIONS: AddEventListenerOptions = { capture: true, passive: false };
+const CHANGE_CAPTURE_OPTIONS: AddEventListenerOptions = { capture: true, passive: false };
 
 const log = (...a: unknown[]): void => console.log('[GeminiUploadHotkey]', ...a);
 const USE_HIDDEN_FALLBACK = false;
@@ -214,12 +215,12 @@ export async function handleUploadShortcut(e: KeyboardEvent): Promise<void> {
 export function initializeFileUpload(): void {
   window.__gxtUploadHotkeyOff?.();
   document.addEventListener('keydown', hotkeyHandler, KEYDOWN_CAPTURE_OPTIONS);
-  document.addEventListener('change', onFileChange, true);
+  document.addEventListener('change', onFileChange, CHANGE_CAPTURE_OPTIONS);
   const isMac = isMacPlatform();
   const modLabel = getModLabel({ isMac, useSymbol: true });
   window.__gxtUploadHotkeyOff = (): void => {
     document.removeEventListener('keydown', hotkeyHandler, KEYDOWN_CAPTURE_OPTIONS);
-    document.removeEventListener('change', onFileChange, true);
+    document.removeEventListener('change', onFileChange, CHANGE_CAPTURE_OPTIONS);
     if (state.busyTimer) clearTimeout(state.busyTimer);
     log('Hotkey unregistered');
   };

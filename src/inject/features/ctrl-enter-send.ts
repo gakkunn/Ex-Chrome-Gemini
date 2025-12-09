@@ -20,6 +20,8 @@ function isVisible(el: HTMLElement | null): boolean {
 const IME: IMEState = { active: false };
 let missingSendLogged = false;
 
+const COMPOSITION_CAPTURE_OPTIONS: AddEventListenerOptions = { capture: true, passive: false };
+
 function isEditableTarget(t: EventTarget | null): boolean {
   if (!t || !(t instanceof Element)) return false;
   const tag = t.tagName;
@@ -119,6 +121,6 @@ const onCompEnd = (): void => {
  */
 export function initializeCtrlEnterSend(): void {
   // IME listeners are always needed for composition tracking
-  document.addEventListener('compositionstart', onCompStart, true);
-  document.addEventListener('compositionend', onCompEnd, true);
+  document.addEventListener('compositionstart', onCompStart, COMPOSITION_CAPTURE_OPTIONS);
+  document.addEventListener('compositionend', onCompEnd, COMPOSITION_CAPTURE_OPTIONS);
 }
