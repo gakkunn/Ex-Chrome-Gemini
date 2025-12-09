@@ -26,8 +26,8 @@ When filing an Issue, try to include:
 1. **Fork** this repository and **clone** your fork locally:
 
    ```bash
-   git clone https://github.com/your-username/Ex-Chrome-ChatGPT.git
-   cd Ex-Chrome-ChatGPT
+   git clone https://github.com/your-username/Ex-Chrome-Gemini.git
+   cd Ex-Chrome-Gemini
    ```
 
 2. Install dependencies (Node.js 18+ recommended for Vite):

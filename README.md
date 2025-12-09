@@ -38,8 +38,8 @@ Built as an open-source Chrome Extension (Manifest V3) with Vite + TypeScript.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/gakkunn/Ex-Chrome-ChatGPT.git
-cd Ex-Chrome-ChatGPT
+git clone https://github.com/gakkunn/Ex-Chrome-Gemini.git
+cd Ex-Chrome-Gemini
 ```
 
 ### 2. Install dependencies & Build
@@ -85,8 +85,8 @@ npm run build # production bundle
 ### Setup
 
 ```bash
-git clone https://github.com/gakkunn/Ex-Chrome-ChatGPT.git
-cd Ex-Chrome-ChatGPT
+git clone https://github.com/gakkunn/Ex-Chrome-Gemini.git
+cd Ex-Chrome-Gemini
 
 npm install
 npm run dev   # watch build to dist/
@@ -102,7 +102,7 @@ Automated tests are not available yet. Please verify changes manually in Chrome.
 ## Project Structure
 
 ```text
-Ex-Chrome-ChatGPT/
+Ex-Chrome-Gemini/
   src/                 # Extension source (background, content, inject, popup, manifest)
   public/              # Icons/static files
   docs/images/         # Screenshots and store assets

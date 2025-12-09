@@ -24,5 +24,5 @@ If we make important changes, we will announce them via the extension’s store 
 If you have any questions about this Privacy Policy, please contact:
 
 - Developer: Gakkunn  
-- Contact: https://github.com/gakkunn/Ex-Chrome-ChatGPT.git
+- Contact: https://github.com/gakkunn/Ex-Chrome-Gemini.git
 
