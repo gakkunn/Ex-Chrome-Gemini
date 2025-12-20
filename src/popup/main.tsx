@@ -482,6 +482,10 @@ const PopupApp = () => {
   );
 };
 
+// Set document title and lang dynamically (HTML doesn't support __MSG_*__ placeholders)
+document.title = getMessage('ext_name');
+document.documentElement.lang = getMessage('html_lang');
+
 const container = document.getElementById('app');
 if (container) {
   render(<PopupApp />, container);
