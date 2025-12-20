@@ -90,7 +90,7 @@
   "chat_delete_dialog_title": { "message": "删除聊天？" },
   "chat_delete_dialog_body_generic": { "message": "这将删除当前选中的聊天。" },
   "chat_delete_dialog_body_named": {
-    "message": "将删除“$1”聊天，其中包含的提示、回复和反馈也会一并移除。是否继续？"
+    "message": "此操作将删除您 Gemini 应用活动中的提示、回复和反馈，以及您创建的所有内容。"
   },
   "chat_delete_dialog_confirm": { "message": "删除" },
   "chat_delete_dialog_cancel": { "message": "取消" }

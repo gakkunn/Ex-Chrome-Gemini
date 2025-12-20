@@ -154,7 +154,7 @@ const FALLBACK_MESSAGES: Record<I18nKey, string> = {
   chat_delete_dialog_title: 'Delete chat?',
   chat_delete_dialog_body_generic: 'This will delete the currently selected chat.',
   chat_delete_dialog_body_named:
-    'This will delete the chat "$1", including prompts, responses, and feedback. Continue?',
+    'This will delete prompts, responses, and feedback from your Gemini Apps Activity, plus any content you created.',
   chat_delete_dialog_confirm: 'Delete',
   chat_delete_dialog_cancel: 'Cancel',
 };

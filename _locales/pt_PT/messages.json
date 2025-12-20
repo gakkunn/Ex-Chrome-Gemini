@@ -102,7 +102,7 @@
   "chat_delete_dialog_title": { "message": "Eliminar chat?" },
   "chat_delete_dialog_body_generic": { "message": "O chat selecionado será eliminado." },
   "chat_delete_dialog_body_named": {
-    "message": "O chat \"$1\" será eliminado, incluindo os pedidos, respostas e feedback. Pretende continuar?"
+    "message": "Isto irá eliminar pedidos, respostas e feedback da sua Atividade do Gemini Apps, bem como qualquer conteúdo que tenha criado."
   },
   "chat_delete_dialog_confirm": { "message": "Eliminar" },
   "chat_delete_dialog_cancel": { "message": "Cancelar" }

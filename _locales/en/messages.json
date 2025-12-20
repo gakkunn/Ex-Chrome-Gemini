@@ -296,8 +296,8 @@
     "description": "Generic body text for the delete chat dialog when the chat title is unknown."
   },
   "chat_delete_dialog_body_named": {
-    "message": "This will delete the chat \"$1\", including prompts, responses, and feedback. Continue?",
-    "description": "Body text for the delete chat dialog when the chat title is known. $1 is the chat title."
+    "message": "This will delete prompts, responses, and feedback from your Gemini Apps Activity, plus any content you created.",
+    "description": "Body text for the delete chat dialog."
   },
   "chat_delete_dialog_confirm": {
     "message": "Delete",

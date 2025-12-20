@@ -9,26 +9,26 @@
   "popup_section_shortcuts": { "message": "Raccourcis" },
   "popup_loading": { "message": "Chargement…" },
   "popup_load_error": {
-    "message": "Impossible de charger les paramètres. Veuillez recharger l’extension."
+    "message": "Impossible de charger les paramètres. Veuillez recharger l'extension."
   },
   "popup_settings_unavailable": { "message": "Impossible de charger les paramètres." },
   "popup_toggle_label_vim_scroll": { "message": "Défilement façon Vim" },
   "popup_toggle_label_wide_screen": { "message": "Grand écran (interface épurée + focus)" },
   "popup_toggle_label_safe_send": { "message": "Envoyer avec Cmd/Ctrl + Entrée" },
   "popup_toggle_label_other_shortcuts": { "message": "Autres raccourcis" },
-  "popup_toggle_enable_success": { "message": "« $1 » est activé." },
-  "popup_toggle_disable_success": { "message": "« $1 » est désactivé." },
-  "popup_toggle_save_error": { "message": "Échec de l’enregistrement du commutateur. Réessayez." },
+  "popup_toggle_enable_success": { "message": "« $1 » est activé." },
+  "popup_toggle_disable_success": { "message": "« $1 » est désactivé." },
+  "popup_toggle_save_error": { "message": "Échec de l'enregistrement du commutateur. Réessayez." },
   "popup_reset_button": { "message": "Réinitialiser" },
   "popup_resetting": { "message": "Réinitialisation…" },
   "popup_reset_success": { "message": "Tous les paramètres ont été réinitialisés par défaut." },
   "popup_reset_error": { "message": "Échec de la réinitialisation. Réessayez." },
   "popup_shortcut_placeholder": { "message": "Appuyez sur les touches" },
   "popup_shortcut_conflict_user": {
-    "message": "« $1 » est déjà attribué à « $2 ». Choisissez une autre combinaison."
+    "message": "« $1 » est déjà attribué à « $2 ». Choisissez une autre combinaison."
   },
   "popup_shortcut_conflict_gemini": {
-    "message": "« $1 » risque de rentrer en conflit avec le raccourci par défaut « $2 » de Gemini. Le comportement par défaut peut être altéré."
+    "message": "« $1 » risque de rentrer en conflit avec le raccourci par défaut « $2 » de Gemini. Le comportement par défaut peut être altéré."
   },
   "error_shortcut_requires_modifier": {
     "message": "\"$1\" doit être combiné à une touche de modification.",
@@ -44,10 +44,10 @@
   "popup_shortcut_error_modifier_required": {
     "message": "\"$1\" requires a modifier key (Ctrl/Cmd/Alt/Shift)."
   },
-  "popup_shortcut_success": { "message": "Le raccourci de « $1 » a été mis à jour." },
-  "popup_shortcut_error": { "message": "Échec de l’enregistrement du raccourci. Réessayez." },
+  "popup_shortcut_success": { "message": "Le raccourci de « $1 » a été mis à jour." },
+  "popup_shortcut_error": { "message": "Échec de l'enregistrement du raccourci. Réessayez." },
   "popup_shortcut_empty_state": {
-    "message": "Aucun raccourci n’est actif. Activez un commutateur pour les gérer."
+    "message": "Aucun raccourci n'est actif. Activez un commutateur pour les gérer."
   },
   "keyboard_label_ctrl": { "message": "Ctrl" },
   "keyboard_label_cmd": { "message": "Cmd" },
@@ -68,13 +68,13 @@
   "shortcut_label_scroll_bottom": { "message": "Défiler en bas" },
   "shortcut_label_scroll_up": { "message": "Défiler vers le haut" },
   "shortcut_label_scroll_down": { "message": "Défiler vers le bas" },
-  "shortcut_label_scroll_half_up": { "message": "Défiler d’une demi-page vers le haut" },
-  "shortcut_label_scroll_half_down": { "message": "Défiler d’une demi-page vers le bas" },
+  "shortcut_label_scroll_half_up": { "message": "Défiler d'une demi-page vers le haut" },
+  "shortcut_label_scroll_half_down": { "message": "Défiler d'une demi-page vers le bas" },
   "shortcut_label_toggle_focus": { "message": "Basculer le focus" },
   "shortcut_label_toggle_model": { "message": "Basculer le sélecteur de modèle" },
-  "shortcut_label_mode_instant": { "message": "Définir le mode : Fast" },
-  "shortcut_label_mode_thinking": { "message": "Définir le mode : Thinking" },
-  "shortcut_label_mode_pro": { "message": "Définir le mode : Pro" },
+  "shortcut_label_mode_instant": { "message": "Définir le mode : Fast" },
+  "shortcut_label_mode_thinking": { "message": "Définir le mode : Thinking" },
+  "shortcut_label_mode_pro": { "message": "Définir le mode : Pro" },
   "shortcut_label_temporary_chat": { "message": "Ouvrir un chat temporaire" },
   "shortcut_label_toggle_shortcuts": { "message": "Basculer la liste des raccourcis" },
   "shortcut_label_delete_chat": { "message": "Supprimer le chat" },
@@ -84,23 +84,23 @@
   "gemini_default_shortcut_search": { "message": "Rechercher" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "Basculer la barre latérale" },
   "toast_no_chat_selected": { "message": "Aucun chat sélectionné." },
-  "toast_pin_failed": { "message": "Impossible d’épingler le chat." },
+  "toast_pin_failed": { "message": "Impossible d'épingler le chat." },
   "toast_temp_chat_failed": {
-    "message": "Impossible d’ouvrir un chat temporaire. Veuillez recharger la page."
+    "message": "Impossible d'ouvrir un chat temporaire. Veuillez recharger la page."
   },
   "toast_delete_failed": { "message": "Impossible de supprimer le chat." },
   "toast_send_button_missing": { "message": "Bouton Envoyer introuvable." },
   "toast_send_button_disabled": {
     "message": "Le bouton Envoyer est temporairement désactivé. Veuillez recharger la page."
   },
-  "toast_upload_failed": { "message": "Impossible d’ouvrir le menu d’envoi." },
+  "toast_upload_failed": { "message": "Impossible d'ouvrir le menu d'envoi." },
   "toast_gem_create_failed": {
-    "message": "Impossible d’ouvrir la page de création de Gems. Veuillez recharger la page."
+    "message": "Impossible d'ouvrir la page de création de Gems. Veuillez recharger la page."
   },
-  "chat_delete_dialog_title": { "message": "Supprimer le chat ?" },
+  "chat_delete_dialog_title": { "message": "Supprimer le chat ?" },
   "chat_delete_dialog_body_generic": { "message": "Le chat sélectionné sera supprimé." },
   "chat_delete_dialog_body_named": {
-    "message": "Le chat « $1 » sera supprimé, y compris les invites, réponses et commentaires. Continuer ?"
+    "message": "Cela supprimera les invites, réponses et commentaires de votre activité Gemini Apps, ainsi que tout le contenu que vous avez créé."
   },
   "chat_delete_dialog_confirm": { "message": "Supprimer" },
   "chat_delete_dialog_cancel": { "message": "Annuler" }

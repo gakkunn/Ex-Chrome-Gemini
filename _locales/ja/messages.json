@@ -104,7 +104,7 @@
   "chat_delete_dialog_title": { "message": "チャットを削除しますか？" },
   "chat_delete_dialog_body_generic": { "message": "現在選択中のチャットを削除します。" },
   "chat_delete_dialog_body_named": {
-    "message": "「$1」のチャットを削除します。プロンプトや回答、フィードバックも含めて削除されます。続行しますか？"
+    "message": "Gemini アプリのアクティビティからプロンプト、回答、フィードバックを削除します。作成したコンテンツも含まれます。"
   },
   "chat_delete_dialog_confirm": { "message": "削除" },
   "chat_delete_dialog_cancel": { "message": "キャンセル" }

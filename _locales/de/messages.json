@@ -106,7 +106,7 @@
   "chat_delete_dialog_title": { "message": "Chat löschen?" },
   "chat_delete_dialog_body_generic": { "message": "Der ausgewählte Chat wird gelöscht." },
   "chat_delete_dialog_body_named": {
-    "message": "Der Chat „$1“ wird einschließlich Eingaben, Antworten und Feedback gelöscht. Fortfahren?"
+    "message": "Dies löscht Eingaben, Antworten und Feedback aus Ihren Gemini Apps-Aktivitäten sowie alle von Ihnen erstellten Inhalte."
   },
   "chat_delete_dialog_confirm": { "message": "Löschen" },
   "chat_delete_dialog_cancel": { "message": "Abbrechen" }

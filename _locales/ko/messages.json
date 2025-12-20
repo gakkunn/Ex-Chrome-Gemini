@@ -100,7 +100,7 @@
   "chat_delete_dialog_title": { "message": "채팅을 삭제할까요?" },
   "chat_delete_dialog_body_generic": { "message": "현재 선택된 채팅이 삭제됩니다." },
   "chat_delete_dialog_body_named": {
-    "message": "\"$1\" 채팅이 삭제되며, 프롬프트와 응답, 피드백도 함께 제거됩니다. 계속하시겠습니까?"
+    "message": "Gemini 앱 활동에서 프롬프트, 응답, 피드백과 생성한 모든 콘텐츠가 삭제됩니다."
   },
   "chat_delete_dialog_confirm": { "message": "삭제" },
   "chat_delete_dialog_cancel": { "message": "취소" }
