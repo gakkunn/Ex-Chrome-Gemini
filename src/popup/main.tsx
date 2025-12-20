@@ -26,6 +26,13 @@ import type { ExtensionSettings } from '@/shared/settings';
 import { loadSettings, saveSettings } from '@/shared/storage';
 import './style.css';
 
+const GITHUB_URL = 'https://github.com/gakkunn/Ex-Chrome-Gemini';
+const SUPPORT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSf8hOHRBnTAKJni5cuEanlfeBabM4xkFCP9Tp_YVuBTXCeOeg/viewform';
+const COFFEE_URL = 'https://www.buymeacoffee.com/gakkunn';
+const ICON_GITHUB_SRC = '/img/github.svg';
+const ICON_SUPPORT_SRC = '/img/support.svg';
+const ICON_COFFEE_SRC = '/img/coffee.svg';
+
 const featureLabelKeys: Record<FeatureCategory, I18nKey> = {
   vimScroll: 'popup_toggle_label_vim_scroll',
   wideScreen: 'popup_toggle_label_wide_screen',
@@ -427,6 +434,50 @@ const PopupApp = () => {
           </section>
         </>
       )}
+
+      <footer class="popup-footer">
+        <section class="links">
+          <div>
+            <a
+              class="footer-button github-button"
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Contribute"
+            >
+              <span>
+                <img class="icon" src={ICON_GITHUB_SRC} alt="Contribute" />
+              </span>
+            </a>
+          </div>
+          <div>
+            <a
+              class="footer-button question-button"
+              href={SUPPORT_FORM_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Support"
+            >
+              <span>
+                <img class="icon" src={ICON_SUPPORT_SRC} alt="Report a problem" />
+              </span>
+            </a>
+          </div>
+          <div>
+            <a
+              class="footer-button coffee-button"
+              href={COFFEE_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Buy me a coffee"
+            >
+              <span>
+                <img class="icon" src={ICON_COFFEE_SRC} alt="Buy me a coffee" />
+              </span>
+            </a>
+          </div>
+        </section>
+      </footer>
     </div>
   );
 };
