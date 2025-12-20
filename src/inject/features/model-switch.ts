@@ -1,12 +1,14 @@
 /**
- * Model switching: Instant/Thinking Mode and Toggle Model (Cmd/Ctrl+Shift+0 / Cmd/Ctrl+Shift+9 / Cmd/Ctrl+Shift+Down)
+ * Model switching: Fast/Thinking/Pro Mode and Toggle Model
+ * (Cmd/Ctrl+Shift+0 / Cmd/Ctrl+Shift+8 / Cmd/Ctrl+Shift+9 / Cmd/Ctrl+Shift+Down)
  */
 
 const SELECTORS = {
   MENU_TRIGGER: '[data-test-id="bard-mode-menu-button"] button',
   MENU_CONTAINER: '.cdk-overlay-pane [role="menu"]',
   OPTION_FAST: '[data-test-id="bard-mode-option-fast"]',
-  OPTION_THINKING: '[data-test-id="bard-mode-option-thinkingwith3pro"]',
+  OPTION_THINKING: '[data-test-id="bard-mode-option-thinking"]',
+  OPTION_PRO: '[data-test-id="bard-mode-option-pro"]',
   INPUT_FIELD: '.input-gradient [contenteditable="true"][role="textbox"]',
 };
 

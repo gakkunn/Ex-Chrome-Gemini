@@ -12,6 +12,7 @@ export type ShortcutId =
   | 'toggleModel'
   | 'modeInstant'
   | 'modeThinking'
+  | 'modePro'
   | 'temporaryChat'
   | 'toggleShortcuts'
   | 'deleteChat'
@@ -114,6 +115,12 @@ export const SHORTCUT_DEFINITIONS: ShortcutDefinition[] = [
   shortcutDefinition({
     id: 'modeThinking',
     labelKey: 'shortcut_label_mode_thinking',
+    category: 'otherShortcuts',
+    defaultBindings: [{ key: '8', code: 'Digit8', mod: true, shift: true }],
+  }),
+  shortcutDefinition({
+    id: 'modePro',
+    labelKey: 'shortcut_label_mode_pro',
     category: 'otherShortcuts',
     defaultBindings: [{ key: '9', code: 'Digit9', mod: true, shift: true }],
   }),

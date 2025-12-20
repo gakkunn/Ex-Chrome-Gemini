@@ -204,6 +204,12 @@ export class ShortcutsManager {
       handleModelSwitch(MODEL_SELECTORS.OPTION_THINKING);
       return;
     }
+
+    if (this.matchesShortcut('modePro', e)) {
+      e.preventDefault();
+      handleModelSwitch(MODEL_SELECTORS.OPTION_PRO);
+      return;
+    }
   }
 
   private bindingToTokens(binding: KeyBinding): string[] {
@@ -305,6 +311,7 @@ export class ShortcutsManager {
       addDefinition(sectionTitles.model, 'toggleModel');
       addDefinition(sectionTitles.model, 'modeInstant');
       addDefinition(sectionTitles.model, 'modeThinking');
+      addDefinition(sectionTitles.model, 'modePro');
       addDefinition(sectionTitles.other, 'temporaryChat');
       addDefinition(sectionTitles.other, 'deleteChat');
       addDefinition(sectionTitles.other, 'uploadFiles');

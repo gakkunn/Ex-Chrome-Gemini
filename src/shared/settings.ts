@@ -51,6 +51,19 @@ function cleanUploadBindings(bindings: KeyBinding[] | undefined): KeyBinding[] |
   return filtered.length > 0 ? filtered : DEFAULT_SHORTCUTS.uploadFiles;
 }
 
+function isLegacyModeThinking(bindings: KeyBinding[] | undefined): boolean {
+  if (!Array.isArray(bindings) || bindings.length !== 1) return false;
+  const binding = bindings[0];
+  if (!binding || !matchesKey(binding, '9')) return false;
+  return (
+    binding.shift === true &&
+    binding.mod === true &&
+    binding.meta !== true &&
+    binding.ctrl !== true &&
+    binding.alt !== true
+  );
+}
+
 export function mergeSettings(
   saved: PartialExtensionSettings | undefined,
   partial: PartialExtensionSettings = {}
@@ -80,6 +93,14 @@ export function mergeSettings(
     if (cleaned) {
       shortcuts.uploadFiles = cleaned;
     }
+  }
+
+  if (
+    saved?.shortcuts?.modeThinking &&
+    isLegacyModeThinking(saved.shortcuts.modeThinking) &&
+    !partial.shortcuts?.modeThinking
+  ) {
+    shortcuts.modeThinking = DEFAULT_SHORTCUTS.modeThinking;
   }
 
   return { featureToggles, shortcuts };
