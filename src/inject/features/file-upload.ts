@@ -52,7 +52,7 @@ function firePointerClick(el: HTMLElement | null): void {
 
 function waitFor(
   testFn: string | (() => HTMLElement | null),
-  { timeout = 2500, poll = 50 }: { timeout?: number; poll?: number } = {}
+  { timeout = 2500, poll = 15 }: { timeout?: number; poll?: number } = {}
 ): Promise<HTMLElement> {
   return new Promise((resolve, reject) => {
     const t0 = performance.now();
@@ -116,6 +116,15 @@ function getHiddenTrigger(root: HTMLElement): HTMLElement | null {
   );
 }
 
+function getGlobalHiddenTrigger(): HTMLElement | null {
+  return (
+    (document.querySelector(
+      'images-files-uploader button.hidden-local-file-image-selector-button'
+    ) as HTMLElement | null) ||
+    (document.querySelector('images-files-uploader [xapfileselectortrigger]') as HTMLElement | null)
+  );
+}
+
 async function openUploadMenu(): Promise<HTMLElement | null> {
   const btn = getMenuButton();
   if (!btn) throw new Error('Upload menu button not found.');
@@ -135,6 +144,16 @@ async function doUpload(): Promise<void> {
   state.busyTimer = setTimeout(() => {
     state.busy = false;
   }, BUSY_TIMEOUT_MS);
+
+  // Fast path: try hidden trigger directly without opening menu
+  const globalHiddenBtn = getGlobalHiddenTrigger();
+  if (globalHiddenBtn) {
+    firePointerClick(globalHiddenBtn);
+    log('Upload triggered via fast path (hidden button)');
+    return;
+  }
+
+  // Fallback: open menu and find button
   const root = await openUploadMenu();
   if (!root) throw new Error('Upload menu did not render.');
   const visibleBtn = getVisibleUploadBtn(root);
