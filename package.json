@@ -1,6 +1,6 @@
 {
   "name": "gemini-combined-extension",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Safer send, vim-like scroll, model toggles, temporary chats, and clean UI for Gemini.",
   "scripts": {
     "dev": "vite build --watch",
