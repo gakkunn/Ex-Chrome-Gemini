@@ -212,12 +212,16 @@
     "description": "Label for the Toggle Model shortcut."
   },
   "shortcut_label_mode_instant": {
-    "message": "Set Mode: Instant",
-    "description": "Label for the Set Mode: Instant shortcut."
+    "message": "Set Mode: Fast",
+    "description": "Label for the Set Mode: Fast shortcut."
   },
   "shortcut_label_mode_thinking": {
     "message": "Set Mode: Thinking",
     "description": "Label for the Set Mode: Thinking shortcut."
+  },
+  "shortcut_label_mode_pro": {
+    "message": "Set Mode: Pro",
+    "description": "Label for the Set Mode: Pro shortcut."
   },
   "shortcut_label_temporary_chat": {
     "message": "Open Temporary Chat",
