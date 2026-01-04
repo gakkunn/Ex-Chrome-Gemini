@@ -74,7 +74,7 @@ npm run build # production bundle
    - Shift + Space: toggle focus on the chat input
    - Cmd/Ctrl + Enter: send; Enter alone adds a newline (safe send)
    - j / k, Shift + J / Shift + K, Cmd/Ctrl + J / Cmd/Ctrl + K: Vim-like scroll controls
-   - Cmd/Ctrl + Shift + 0 / 8 / 9: switch to Fast, Thinking, or Pro model; Cmd/Ctrl + Shift + ↓: open model menu
+   - Cmd+Shift+0 (macOS) / Ctrl+Shift+7 (Windows): switch to Fast model; Cmd/Ctrl + Shift + 8 / 9: switch to Thinking/Pro; Cmd/Ctrl + Shift + ↓: open model menu
    - Cmd/Ctrl + U: open file upload; Cmd/Ctrl + Shift + Backspace: delete current chat (with confirmation); Cmd/Ctrl + Shift + P to pin chat; Cmd/Ctrl + I to start a temporary chat
    - Cmd/Ctrl + /: open the shortcuts dialog
 

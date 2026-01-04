@@ -72,7 +72,7 @@ This directory contains 10 modular feature implementations for the Gemini Shortc
 **Hotkeys:**
 
 - `Cmd/Ctrl + Shift + ↓` - Toggle model menu
-- `Cmd/Ctrl + Shift + 0` - Switch to Fast Mode
+- `Cmd+Shift+0` (macOS) / `Ctrl+Shift+7` (Windows) - Switch to Fast Mode
 - `Cmd/Ctrl + Shift + 8` - Switch to Thinking Mode
 - `Cmd/Ctrl + Shift + 9` - Switch to Pro Mode
 - Strong pointer event simulation for menu interaction
