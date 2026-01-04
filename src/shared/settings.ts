@@ -1,5 +1,6 @@
 import { DEFAULT_FEATURE_TOGGLES } from './feature-flags';
 import { DEFAULT_SHORTCUTS } from './shortcuts';
+import { isWindowsPlatform } from './keyboard';
 
 import type { FeatureToggles } from './feature-flags';
 import type { KeyBinding, ShortcutSettings } from './shortcuts';
@@ -64,6 +65,22 @@ function isLegacyModeThinking(bindings: KeyBinding[] | undefined): boolean {
   );
 }
 
+function isLegacyModeInstant(bindings: KeyBinding[] | undefined): boolean {
+  if (!Array.isArray(bindings) || bindings.length !== 1) return false;
+  const binding = bindings[0];
+  if (!binding) return false;
+  const keyMatch = binding.key?.toLowerCase() === '0';
+  const codeMatch = binding.code === 'Digit0';
+  if (!keyMatch && !codeMatch) return false;
+  return (
+    binding.shift === true &&
+    binding.mod === true &&
+    binding.meta !== true &&
+    binding.ctrl !== true &&
+    binding.alt !== true
+  );
+}
+
 export function mergeSettings(
   saved: PartialExtensionSettings | undefined,
   partial: PartialExtensionSettings = {}
@@ -101,6 +118,15 @@ export function mergeSettings(
     !partial.shortcuts?.modeThinking
   ) {
     shortcuts.modeThinking = DEFAULT_SHORTCUTS.modeThinking;
+  }
+
+  if (
+    isWindowsPlatform() &&
+    saved?.shortcuts?.modeInstant &&
+    isLegacyModeInstant(saved.shortcuts.modeInstant) &&
+    !partial.shortcuts?.modeInstant
+  ) {
+    shortcuts.modeInstant = DEFAULT_SHORTCUTS.modeInstant;
   }
 
   return { featureToggles, shortcuts };
