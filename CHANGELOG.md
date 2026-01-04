@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1 - 2026-01-04
+### Features
+- **model-switch:** Add Windows-specific Fast mode shortcut
+- **i18n:** Update chat delete dialog message
+
+### Documentation
+- Update Fast mode shortcut documentation
+
 ## 1.1.0 - 2025-12-20
 ### Features
 - **model-switch:** Add support for Pro model and update shortcuts
