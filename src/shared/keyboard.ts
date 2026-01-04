@@ -24,6 +24,16 @@ export function isMacPlatform(): boolean {
   return navigator.platform.toLowerCase().includes('mac');
 }
 
+export function isWindowsPlatform(): boolean {
+  if (typeof navigator === 'undefined') {
+    return false;
+  }
+  const platform = typeof navigator.platform === 'string' ? navigator.platform.toLowerCase() : '';
+  if (platform.includes('win')) return true;
+  const userAgent = typeof navigator.userAgent === 'string' ? navigator.userAgent.toLowerCase() : '';
+  return userAgent.includes('windows');
+}
+
 export function isModKey(
   e: Pick<KeyboardEvent, 'metaKey' | 'ctrlKey'> | { metaKey?: boolean; ctrlKey?: boolean }
 ): boolean {

@@ -1,5 +1,6 @@
 import type { FeatureCategory } from './feature-flags';
 import { getMessage, type I18nKey } from './i18n';
+import { isWindowsPlatform } from './keyboard';
 
 export type ShortcutId =
   | 'scrollTop'
@@ -57,6 +58,16 @@ const shortcutDefinition = (config: ShortcutDefinitionConfig): ShortcutDefinitio
   },
 });
 
+const DEFAULT_MODE_INSTANT_BINDINGS: KeyBinding[] = [
+  { key: '0', code: 'Digit0', mod: true, shift: true },
+];
+const WINDOWS_MODE_INSTANT_BINDINGS: KeyBinding[] = [
+  { key: '7', code: 'Digit7', mod: true, shift: true },
+];
+
+const getModeInstantDefaultBindings = (): KeyBinding[] =>
+  isWindowsPlatform() ? WINDOWS_MODE_INSTANT_BINDINGS : DEFAULT_MODE_INSTANT_BINDINGS;
+
 export const SHORTCUT_DEFINITIONS: ShortcutDefinition[] = [
   shortcutDefinition({
     id: 'scrollTop',
@@ -110,7 +121,7 @@ export const SHORTCUT_DEFINITIONS: ShortcutDefinition[] = [
     id: 'modeInstant',
     labelKey: 'shortcut_label_mode_instant',
     category: 'otherShortcuts',
-    defaultBindings: [{ key: '0', code: 'Digit0', mod: true, shift: true }],
+    defaultBindings: getModeInstantDefaultBindings(),
   }),
   shortcutDefinition({
     id: 'modeThinking',

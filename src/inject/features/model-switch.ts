@@ -1,6 +1,6 @@
 /**
  * Model switching: Fast/Thinking/Pro Mode and Toggle Model
- * (Cmd/Ctrl+Shift+0 / Cmd/Ctrl+Shift+8 / Cmd/Ctrl+Shift+9 / Cmd/Ctrl+Shift+Down)
+ * (Cmd+Shift+0 on macOS, Ctrl+Shift+7 on Windows / Cmd/Ctrl+Shift+8 / Cmd/Ctrl+Shift+9 / Cmd/Ctrl+Shift+Down)
  */
 
 const SELECTORS = {
