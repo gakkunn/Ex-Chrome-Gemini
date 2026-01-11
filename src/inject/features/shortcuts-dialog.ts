@@ -290,8 +290,8 @@ export function showShortcutsDialog(data: ShortcutSection[]): void {
   }
 
   // Re-bind click listeners since we recreated elements
-  backdrop.addEventListener('click', onBackdropClick);
-  closeBtn?.addEventListener('click', () => close(popover, backdrop));
+  backdrop.addEventListener('click', onBackdropClick, NON_PASSIVE_CLICK_OPTIONS);
+  closeBtn?.addEventListener('click', () => close(popover, backdrop), NON_PASSIVE_CLICK_OPTIONS);
 
   open(popover, backdrop, closeBtn);
 }

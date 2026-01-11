@@ -34,6 +34,6 @@ export function addBridgeListener<TType extends BridgeMessageType>(
     if (event.data?.type !== type) return;
     handler(event.data.payload as BridgePayloadMap[TType]);
   };
-  window.addEventListener('message', listener);
+  window.addEventListener('message', listener, { passive: false });
   return () => window.removeEventListener('message', listener);
 }

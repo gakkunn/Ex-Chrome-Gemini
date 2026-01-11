@@ -64,20 +64,24 @@ async function initializeExtension(): Promise<void> {
   const shortcutsManager = new ShortcutsManager(currentSettings);
 
   // Listen for settings changes to update manager (via bridge)
-  window.addEventListener('message', (event) => {
-    if (event.source !== window) return;
-    if (event.data?.type === BRIDGE_MESSAGE.SETTINGS_UPDATE) {
-      const newSettings = event.data.payload;
-      console.log('[Gemini Shortcut Extension] Received settings update:', newSettings);
-      if (newSettings) {
-        currentSettings = mergeSettings(currentSettings, newSettings);
-        console.log('[Gemini Shortcut Extension] Merged settings:', currentSettings);
-        setFeatureToggles(currentSettings.featureToggles);
-        shortcutsManager.updateSettings(currentSettings);
-        console.log('[Gemini Shortcut Extension] Settings applied successfully');
+  window.addEventListener(
+    'message',
+    (event) => {
+      if (event.source !== window) return;
+      if (event.data?.type === BRIDGE_MESSAGE.SETTINGS_UPDATE) {
+        const newSettings = event.data.payload;
+        console.log('[Gemini Shortcut Extension] Received settings update:', newSettings);
+        if (newSettings) {
+          currentSettings = mergeSettings(currentSettings, newSettings);
+          console.log('[Gemini Shortcut Extension] Merged settings:', currentSettings);
+          setFeatureToggles(currentSettings.featureToggles);
+          shortcutsManager.updateSettings(currentSettings);
+          console.log('[Gemini Shortcut Extension] Settings applied successfully');
+        }
       }
-    }
-  });
+    },
+    { passive: false }
+  );
 
   console.log('[Gemini Shortcut Extension] All features initialized successfully');
 }

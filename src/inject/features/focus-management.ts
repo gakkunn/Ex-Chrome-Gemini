@@ -95,8 +95,8 @@ function bind(container: HTMLElement, editor: HTMLElement): void {
     }
   };
 
-  container.addEventListener('focusin', onFocusIn, { signal });
-  container.addEventListener('focusout', onFocusOut, { signal });
+  container.addEventListener('focusin', onFocusIn, { signal, passive: false });
+  container.addEventListener('focusout', onFocusOut, { signal, passive: false });
 
   // Initial reflection
   container.classList.toggle('focused', container.matches(':focus-within'));
@@ -113,7 +113,7 @@ export function initializeFocusManagement(): void {
     tryBindWithRetry();
     return _replace.apply(this, args);
   };
-  window.addEventListener('popstate', () => tryBindWithRetry());
+  window.addEventListener('popstate', () => tryBindWithRetry(), { passive: false });
 
   // Initial binding
   tryBindWithRetry();

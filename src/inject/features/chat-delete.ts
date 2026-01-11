@@ -8,6 +8,7 @@ import { getModLabel, isMacPlatform, isModKey } from '@/shared/keyboard';
 import { isFeatureEnabled } from '../state/toggles';
 
 const KEYDOWN_CAPTURE_OPTIONS: AddEventListenerOptions = { capture: true, passive: false };
+const NON_PASSIVE_CLICK_OPTIONS: AddEventListenerOptions = { passive: false };
 
 /**
  * Get utils, throwing if not available
@@ -209,20 +210,32 @@ function createConfirmDialog({
       overlay.remove();
       window.removeEventListener('keydown', onKey, KEYDOWN_CAPTURE_OPTIONS);
     }
-    btnCancel.addEventListener('click', () => {
-      cleanup();
-      resolve(false);
-    });
-    btnDelete.addEventListener('click', () => {
-      cleanup();
-      resolve(true);
-    });
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
+    btnCancel.addEventListener(
+      'click',
+      () => {
         cleanup();
         resolve(false);
-      }
-    });
+      },
+      NON_PASSIVE_CLICK_OPTIONS
+    );
+    btnDelete.addEventListener(
+      'click',
+      () => {
+        cleanup();
+        resolve(true);
+      },
+      NON_PASSIVE_CLICK_OPTIONS
+    );
+    overlay.addEventListener(
+      'click',
+      (e) => {
+        if (e.target === overlay) {
+          cleanup();
+          resolve(false);
+        }
+      },
+      NON_PASSIVE_CLICK_OPTIONS
+    );
     window.addEventListener('keydown', onKey, KEYDOWN_CAPTURE_OPTIONS);
     document.body.appendChild(overlay);
     btnDelete.focus();

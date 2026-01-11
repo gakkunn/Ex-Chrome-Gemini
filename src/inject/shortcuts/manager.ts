@@ -124,12 +124,16 @@ export class ShortcutsManager {
   }
 
   private bindKeys() {
-    document.addEventListener('keyup', (e) => {
-      if (e.key === getScrollingKey()) {
-        stopContinuousScroll();
-        setScrollingKey(null);
-      }
-    });
+    document.addEventListener(
+      'keyup',
+      (e) => {
+        if (e.key === getScrollingKey()) {
+          stopContinuousScroll();
+          setScrollingKey(null);
+        }
+      },
+      { passive: false }
+    );
 
     document.addEventListener('keydown', (e) => this.handleKeydown(e), KEYDOWN_CAPTURE_OPTIONS);
   }
