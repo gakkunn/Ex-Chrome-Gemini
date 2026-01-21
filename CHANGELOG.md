@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.0 - 2026-01-21
+### Features
+- **popup:** Add a review callout (icon + button) in the popup header
+- **i18n:** Add review prompt translations for all locales
+
+### Fixes
+- **inject:** Explicitly set `passive: false` on event listeners to allow `preventDefault` and suppress warnings
+
+### Documentation
+- Add Gemini input field DOM structure documentation
+- Add popup layout and review footer reproduction notes
+
 ## 1.1.1 - 2026-01-04
 ### Features
 - **model-switch:** Add Windows-specific Fast mode shortcut
@@ -28,4 +40,3 @@
 
 ## 1.0.0 - 2025-12-07
 - Initial release
-
