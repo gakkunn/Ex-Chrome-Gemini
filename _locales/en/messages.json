@@ -27,6 +27,10 @@
     "message": "Loading…",
     "description": "Shown while popup data is loading."
   },
+  "popup_footer_review_prompt": {
+    "message": "Even a short comment would truly make me happy",
+    "description": "Message shown above the footer links encouraging reviews."
+  },
   "popup_load_error": {
     "message": "Failed to load settings. Please reload the extension.",
     "description": "Error shown when loading settings fails."

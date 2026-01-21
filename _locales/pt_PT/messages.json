@@ -8,6 +8,9 @@
   "popup_section_feature_toggles": { "message": "Comutadores de funcionalidades" },
   "popup_section_shortcuts": { "message": "Atalhos" },
   "popup_loading": { "message": "A carregar…" },
+  "popup_footer_review_prompt": {
+    "message": "Mesmo um comentário curto me alegraria do fundo do coração."
+  },
   "popup_load_error": {
     "message": "Não foi possível carregar as definições. Recarregue a extensão."
   },

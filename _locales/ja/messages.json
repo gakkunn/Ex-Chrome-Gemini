@@ -8,6 +8,9 @@
   "popup_section_feature_toggles": { "message": "機能トグル" },
   "popup_section_shortcuts": { "message": "ショートカット" },
   "popup_loading": { "message": "読み込み中です…" },
+  "popup_footer_review_prompt": {
+    "message": "短いコメントでもくれると心の底から喜びます。"
+  },
   "popup_load_error": {
     "message": "設定の読み込みに失敗しました。拡張機能を再読み込みしてください。"
   },

@@ -8,6 +8,9 @@
   "popup_section_feature_toggles": { "message": "기능 토글" },
   "popup_section_shortcuts": { "message": "바로가기 키" },
   "popup_loading": { "message": "불러오는 중…" },
+  "popup_footer_review_prompt": {
+    "message": "짧은 코멘트만 남겨도 마음 깊이 기쁩니다."
+  },
   "popup_load_error": {
     "message": "설정을 불러오지 못했습니다. 확장 프로그램을 다시 로드해 주세요."
   },

@@ -8,6 +8,9 @@
   "popup_section_feature_toggles": { "message": "功能开关" },
   "popup_section_shortcuts": { "message": "快捷键" },
   "popup_loading": { "message": "正在加载…" },
+  "popup_footer_review_prompt": {
+    "message": "哪怕只留一句简短的评论也会让我由衷地开心。"
+  },
   "popup_load_error": { "message": "无法加载设置。请重新加载扩展程序。" },
   "popup_settings_unavailable": { "message": "无法加载设置。" },
   "popup_toggle_label_vim_scroll": { "message": "Vim 风格滚动" },

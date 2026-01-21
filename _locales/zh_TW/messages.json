@@ -8,6 +8,9 @@
   "popup_section_feature_toggles": { "message": "功能切換" },
   "popup_section_shortcuts": { "message": "快捷鍵" },
   "popup_loading": { "message": "載入中…" },
+  "popup_footer_review_prompt": {
+    "message": "哪怕只留下一句簡短的評論也會讓我由衷地開心。"
+  },
   "popup_load_error": { "message": "無法載入設定，請重新載入擴充功能。" },
   "popup_settings_unavailable": { "message": "無法載入設定。" },
   "popup_toggle_label_vim_scroll": { "message": "Vim 風格捲動" },

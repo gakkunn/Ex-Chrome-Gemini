@@ -8,6 +8,9 @@
   "popup_section_feature_toggles": { "message": "Funktionsschalter" },
   "popup_section_shortcuts": { "message": "Kurzbefehle" },
   "popup_loading": { "message": "Wird geladen…" },
+  "popup_footer_review_prompt": {
+    "message": "Schon ein kurzer Kommentar würde mich von Herzen freuen."
+  },
   "popup_load_error": {
     "message": "Einstellungen konnten nicht geladen werden. Bitte laden Sie die Erweiterung neu."
   },

@@ -8,6 +8,9 @@
   "popup_section_feature_toggles": { "message": "Opciones de funciones" },
   "popup_section_shortcuts": { "message": "Atajos" },
   "popup_loading": { "message": "Cargando…" },
+  "popup_footer_review_prompt": {
+    "message": "Incluso un comentario breve me alegraría de corazón."
+  },
   "popup_load_error": {
     "message": "No se pudieron cargar los ajustes. Vuelve a cargar la extensión."
   },

@@ -8,6 +8,9 @@
   "popup_section_feature_toggles": { "message": "Commandes des fonctionnalités" },
   "popup_section_shortcuts": { "message": "Raccourcis" },
   "popup_loading": { "message": "Chargement…" },
+  "popup_footer_review_prompt": {
+    "message": "Même un bref commentaire me ferait chaud au cœur."
+  },
   "popup_load_error": {
     "message": "Impossible de charger les paramètres. Veuillez recharger l'extension."
   },
