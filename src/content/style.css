@@ -175,3 +175,8 @@ html[data-gxt-wide='true'] .boqOnegoogleliteOgbOneGoogleBar {
 .announcement-banner-container {
   display: none !important;
 }
+
+.boqOnegoogleliteOgbOneGoogleBar,
+#gb {
+  display: none !important;
+}

@@ -36,6 +36,12 @@ const manifest = defineManifest(() => ({
   content_scripts: [
     {
       matches: ['https://gemini.google.com/*'],
+      js: ['src/content/viewport-spoof-main.ts'],
+      run_at: 'document_start',
+      world: 'MAIN',
+    },
+    {
+      matches: ['https://gemini.google.com/*'],
       js: ['src/content/index.ts'],
       run_at: 'document_start',
     },

@@ -126,6 +126,7 @@ export default defineConfig(({ mode }) => {
         input: {
           background: path.resolve(__dirname, 'src/background/index.ts'),
           content: path.resolve(__dirname, 'src/content/index.ts'),
+          viewportSpoofMain: path.resolve(__dirname, 'src/content/viewport-spoof-main.ts'),
           inject: path.resolve(__dirname, 'src/inject/index.ts'),
           popup: path.resolve(__dirname, 'src/popup/index.html'),
         },

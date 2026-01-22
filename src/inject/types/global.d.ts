@@ -32,6 +32,12 @@ interface Window {
   __gxt_vimScrollBound?: boolean;
   __gxtUploadHotkeyOff?: () => void;
   __gxtDoUpload?: () => Promise<void>;
+  __gxtViewportSpoof?: {
+    enabled: boolean;
+    minWidth: number;
+    patched: boolean;
+    notify?: () => void;
+  };
   gxtNewChatFix?: {
     closeNow: () => void;
   };

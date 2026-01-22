@@ -3,6 +3,7 @@
  * Initializes all features in the correct order
  */
 
+import './viewport-spoof';
 import './i18n-bootstrap';
 
 import { DEFAULT_FEATURE_TOGGLES } from '@/shared/feature-flags';
