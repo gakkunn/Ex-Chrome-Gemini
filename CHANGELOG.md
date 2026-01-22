@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0 - 2026-01-22
+### Features
+- **inject:** Add Keep Desktop UI spoofing to prevent mobile UI on narrow viewports
+- **popup:** Add Keep Desktop UI toggle help text
+
 ## 1.2.0 - 2026-01-21
 ### Features
 - **popup:** Add a review callout (icon + button) in the popup header
