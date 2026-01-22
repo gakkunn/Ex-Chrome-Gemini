@@ -43,6 +43,8 @@
     "message": "Vim-like Scroll",
     "description": "Label for the Vim-like Scroll toggle."
   },
+  "popup_toggle_label_keep_desktop_ui": { "message": "Keep Desktop UI" },
+  "popup_toggle_keep_desktop_ui_tooltip": { "message": "Keeps the layout even when the screen is 959px or narrower. Turning this on enables the Delete Chat and Pin Chat shortcuts even on screens 959px or narrower. We recommend keeping it on for the richer layout." },
   "popup_toggle_label_wide_screen": {
     "message": "Wide Screen (Clean UI + Focus)",
     "description": "Label for the Wide Screen toggle."

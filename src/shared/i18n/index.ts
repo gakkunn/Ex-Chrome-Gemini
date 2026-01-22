@@ -10,6 +10,8 @@ export const I18N_KEYS = [
   'popup_load_error',
   'popup_settings_unavailable',
   'popup_toggle_label_vim_scroll',
+  'popup_toggle_label_keep_desktop_ui',
+  'popup_toggle_keep_desktop_ui_tooltip',
   'popup_toggle_label_wide_screen',
   'popup_toggle_label_safe_send',
   'popup_toggle_label_other_shortcuts',
@@ -92,6 +94,9 @@ const FALLBACK_MESSAGES: Record<I18nKey, string> = {
   popup_load_error: 'Failed to load settings. Please reload the extension.',
   popup_settings_unavailable: 'Unable to load settings.',
   popup_toggle_label_vim_scroll: 'Vim-like Scroll',
+  popup_toggle_label_keep_desktop_ui: 'Keep Desktop UI',
+  popup_toggle_keep_desktop_ui_tooltip:
+    'Keeps the layout even when the screen is 959px or narrower. Turning this on enables the Delete Chat and Pin Chat shortcuts even on screens 959px or narrower. We recommend keeping it on for the richer layout.',
   popup_toggle_label_wide_screen: 'Wide Screen (Clean UI + Focus)',
   popup_toggle_label_safe_send: 'Send with Cmd/Ctrl + Enter',
   popup_toggle_label_other_shortcuts: 'Other Shortcuts',

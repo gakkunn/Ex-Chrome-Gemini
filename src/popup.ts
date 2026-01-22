@@ -25,12 +25,21 @@ const isMac = isMacPlatform();
 
 const featureLabels: Record<FeatureCategory, string> = {
   vimScroll: 'Vim-like Scroll',
+  keepDesktopUI: 'Keep Desktop UI',
   wideScreen: 'Wide Screen (Clean UI + Focus)',
   safeSend: `Send with ${getModLabel({ isMac, useSymbol: false })} + Enter`,
   otherShortcuts: 'Other Shortcuts',
 };
 
-const featureOrder: FeatureCategory[] = ['vimScroll', 'wideScreen', 'safeSend', 'otherShortcuts'];
+const featureOrder: FeatureCategory[] = [
+  'keepDesktopUI',
+  'vimScroll',
+  'wideScreen',
+  'safeSend',
+  'otherShortcuts',
+];
+
+const keepDesktopTooltip = getMessage('popup_toggle_keep_desktop_ui_tooltip');
 
 let state: ExtensionSettings | null = null;
 
@@ -137,7 +146,18 @@ function renderFeatureToggles() {
     });
 
     const text = document.createElement('span');
+    text.className =
+      category === 'keepDesktopUI' ? 'toggle-label toggle-label-with-tooltip' : 'toggle-label';
     text.textContent = featureLabels[category];
+    if (category === 'keepDesktopUI') {
+      text.setAttribute('data-tooltip', keepDesktopTooltip);
+    }
+    if (category === 'keepDesktopUI') {
+      const badge = document.createElement('span');
+      badge.className = 'toggle-badge';
+      badge.textContent = 'new';
+      text.appendChild(badge);
+    }
 
     wrapper.appendChild(input);
     wrapper.appendChild(text);

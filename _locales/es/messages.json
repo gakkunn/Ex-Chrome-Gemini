@@ -16,6 +16,8 @@
   },
   "popup_settings_unavailable": { "message": "No se pudieron cargar los ajustes." },
   "popup_toggle_label_vim_scroll": { "message": "Desplazamiento estilo Vim" },
+  "popup_toggle_label_keep_desktop_ui": { "message": "Keep Desktop UI" },
+  "popup_toggle_keep_desktop_ui_tooltip": { "message": "Mantiene el diseño incluso cuando la pantalla es de 959px o menos. Al activarlo, los atajos Delete Chat y Pin Chat también están disponibles en pantallas de 959px o menos. Recomendamos dejarlo activado para un diseño más completo." },
   "popup_toggle_label_wide_screen": { "message": "Pantalla ancha (UI limpia + enfoque)" },
   "popup_toggle_label_safe_send": { "message": "Enviar con Cmd/Ctrl + Enter" },
   "popup_toggle_label_other_shortcuts": { "message": "Otros atajos" },

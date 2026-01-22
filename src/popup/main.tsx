@@ -38,12 +38,14 @@ const ICON_REVIEW_SRC = '/img/review.svg';
 
 const featureLabelKeys: Record<FeatureCategory, I18nKey> = {
   vimScroll: 'popup_toggle_label_vim_scroll',
+  keepDesktopUI: 'popup_toggle_label_keep_desktop_ui',
   wideScreen: 'popup_toggle_label_wide_screen',
   safeSend: 'popup_toggle_label_safe_send',
   otherShortcuts: 'popup_toggle_label_other_shortcuts',
 };
 
 const orderedCategories: FeatureCategory[] = [
+  'keepDesktopUI',
   'vimScroll',
   'wideScreen',
   'safeSend',
@@ -224,6 +226,7 @@ const PopupApp = () => {
   const [status, setStatus] = useState<StatusMessage>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isResetting, setIsResetting] = useState(false);
+  const keepDesktopTooltip = getMessage('popup_toggle_keep_desktop_ui_tooltip');
 
   useEffect(() => {
     loadSettings()
@@ -462,7 +465,18 @@ const PopupApp = () => {
                     checked={!!settings.featureToggles[category]}
                     onChange={(event) => handleToggle(category, event.currentTarget.checked)}
                   />
-                  <span>{getFeatureLabel(category)}</span>
+                  <span
+                    class={[
+                      'toggle-label',
+                      category === 'keepDesktopUI' ? 'toggle-label-with-tooltip' : '',
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                    data-tooltip={category === 'keepDesktopUI' ? keepDesktopTooltip : undefined}
+                  >
+                    {getFeatureLabel(category)}
+                    {category === 'keepDesktopUI' && <span class="toggle-badge">new</span>}
+                  </span>
                 </label>
               ))}
             </div>

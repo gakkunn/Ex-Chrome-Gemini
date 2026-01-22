@@ -16,6 +16,8 @@
   },
   "popup_settings_unavailable": { "message": "設定を読み込めませんでした。" },
   "popup_toggle_label_vim_scroll": { "message": "Vim 風スクロール" },
+  "popup_toggle_label_keep_desktop_ui": { "message": "Keep Desktop UI" },
+  "popup_toggle_keep_desktop_ui_tooltip": { "message": "これは画面が959px以下になってもレイアウトを維持する機能です。これをONにすることで959px以下の画面でもDelete ChatやPin Chatショートカットが使用可能になります。それ以外にも機能が充実したレイアウトのためONにすることをおすすめします。" },
   "popup_toggle_label_wide_screen": { "message": "ワイド画面（クリーン UI + フォーカス）" },
   "popup_toggle_label_safe_send": { "message": "Cmd/Ctrl + Enter 送信" },
   "popup_toggle_label_other_shortcuts": { "message": "その他のショートカット" },

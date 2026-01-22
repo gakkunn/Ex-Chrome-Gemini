@@ -16,6 +16,8 @@
   },
   "popup_settings_unavailable": { "message": "Einstellungen konnten nicht geladen werden." },
   "popup_toggle_label_vim_scroll": { "message": "Scrollen im Vim-Stil" },
+  "popup_toggle_label_keep_desktop_ui": { "message": "Keep Desktop UI" },
+  "popup_toggle_keep_desktop_ui_tooltip": { "message": "Hält das Layout auch bei einer Bildschirmbreite von 959px oder weniger. Wenn aktiviert, sind die Delete-Chat- und Pin-Chat-Shortcuts auch bei 959px oder weniger verfügbar. Für das funktionsreichere Layout empfehlen wir, es eingeschaltet zu lassen." },
   "popup_toggle_label_wide_screen": { "message": "Breitbild (aufgeräumtes UI + Fokus)" },
   "popup_toggle_label_safe_send": { "message": "Mit Cmd/Ctrl + Enter senden" },
   "popup_toggle_label_other_shortcuts": { "message": "Weitere Kurzbefehle" },
