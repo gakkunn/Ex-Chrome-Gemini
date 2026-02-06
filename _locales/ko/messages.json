@@ -85,11 +85,13 @@
   "shortcut_label_delete_chat": { "message": "채팅 삭제" },
   "shortcut_label_upload_files": { "message": "파일 업로드" },
   "shortcut_label_pin_chat": { "message": "채팅 고정" },
+  "shortcut_label_share_conversation": { "message": "Share Conversation" },
   "gemini_default_shortcut_new_chat": { "message": "새 채팅" },
   "gemini_default_shortcut_search": { "message": "검색" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "사이드바 전환" },
   "toast_no_chat_selected": { "message": "선택된 채팅이 없습니다." },
   "toast_pin_failed": { "message": "채팅을 고정하지 못했습니다." },
+  "toast_share_failed": { "message": "Failed to share conversation." },
   "toast_temp_chat_failed": {
     "message": "임시 채팅을 열 수 없습니다. 페이지를 새로고침해 주세요."
   },

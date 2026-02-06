@@ -249,6 +249,7 @@
     "message": "Pin Chat",
     "description": "Label for the Pin Chat shortcut."
   },
+  "shortcut_label_share_conversation": { "message": "Share Conversation" },
   "gemini_default_shortcut_new_chat": {
     "message": "New chat",
     "description": "Gemini default shortcut label for starting a new chat."
@@ -269,6 +270,7 @@
     "message": "Failed to pin chat.",
     "description": "Toast shown when pinning a chat fails."
   },
+  "toast_share_failed": { "message": "Failed to share conversation." },
   "toast_temp_chat_failed": {
     "message": "Could not open a temporary chat. Please reload the page.",
     "description": "Toast shown when opening a temporary chat fails."

@@ -91,11 +91,13 @@
   "shortcut_label_delete_chat": { "message": "Chat löschen" },
   "shortcut_label_upload_files": { "message": "Dateien hochladen" },
   "shortcut_label_pin_chat": { "message": "Chat anheften" },
+  "shortcut_label_share_conversation": { "message": "Share Conversation" },
   "gemini_default_shortcut_new_chat": { "message": "Neuer Chat" },
   "gemini_default_shortcut_search": { "message": "Suchen" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "Seitenleiste umschalten" },
   "toast_no_chat_selected": { "message": "Kein Chat ausgewählt." },
   "toast_pin_failed": { "message": "Chat konnte nicht angeheftet werden." },
+  "toast_share_failed": { "message": "Failed to share conversation." },
   "toast_temp_chat_failed": {
     "message": "Temporärer Chat konnte nicht geöffnet werden. Bitte die Seite neu laden."
   },

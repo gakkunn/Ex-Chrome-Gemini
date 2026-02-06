@@ -85,11 +85,13 @@
   "shortcut_label_delete_chat": { "message": "Supprimer le chat" },
   "shortcut_label_upload_files": { "message": "Téléverser des fichiers" },
   "shortcut_label_pin_chat": { "message": "Épingler le chat" },
+  "shortcut_label_share_conversation": { "message": "Share Conversation" },
   "gemini_default_shortcut_new_chat": { "message": "Nouveau chat" },
   "gemini_default_shortcut_search": { "message": "Rechercher" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "Basculer la barre latérale" },
   "toast_no_chat_selected": { "message": "Aucun chat sélectionné." },
   "toast_pin_failed": { "message": "Impossible d'épingler le chat." },
+  "toast_share_failed": { "message": "Failed to share conversation." },
   "toast_temp_chat_failed": {
     "message": "Impossible d'ouvrir un chat temporaire. Veuillez recharger la page."
   },

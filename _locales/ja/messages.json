@@ -89,11 +89,13 @@
   "shortcut_label_delete_chat": { "message": "チャットを削除" },
   "shortcut_label_upload_files": { "message": "ファイルをアップロード" },
   "shortcut_label_pin_chat": { "message": "チャットをピン留め" },
+  "shortcut_label_share_conversation": { "message": "Share Conversation" },
   "gemini_default_shortcut_new_chat": { "message": "新しいチャット" },
   "gemini_default_shortcut_search": { "message": "検索" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "サイドバーを切り替え" },
   "toast_no_chat_selected": { "message": "選択されているチャットがありません。" },
   "toast_pin_failed": { "message": "チャットのピン留めに失敗しました。" },
+  "toast_share_failed": { "message": "Failed to share conversation." },
   "toast_temp_chat_failed": {
     "message": "一時チャットを開けませんでした。ページを再読み込みしてください。"
   },
