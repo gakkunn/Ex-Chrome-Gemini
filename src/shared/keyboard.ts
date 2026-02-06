@@ -30,7 +30,8 @@ export function isWindowsPlatform(): boolean {
   }
   const platform = typeof navigator.platform === 'string' ? navigator.platform.toLowerCase() : '';
   if (platform.includes('win')) return true;
-  const userAgent = typeof navigator.userAgent === 'string' ? navigator.userAgent.toLowerCase() : '';
+  const userAgent =
+    typeof navigator.userAgent === 'string' ? navigator.userAgent.toLowerCase() : '';
   return userAgent.includes('windows');
 }
 

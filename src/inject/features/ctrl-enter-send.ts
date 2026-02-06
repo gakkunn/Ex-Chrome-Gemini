@@ -54,10 +54,7 @@ function getSendButton(): { button: HTMLElement | null; disabled: boolean } {
   const all = document.querySelectorAll('button[aria-label]');
   for (const b of all) {
     const label = (b.getAttribute('aria-label') || '').toLowerCase();
-    if (
-      label.includes('send') &&
-      isVisible(b as HTMLElement)
-    ) {
+    if (label.includes('send') && isVisible(b as HTMLElement)) {
       const isDisabled =
         (b as HTMLButtonElement).disabled || b.getAttribute('aria-disabled') === 'true';
       if (!isDisabled) return { button: b as HTMLElement, disabled: false };

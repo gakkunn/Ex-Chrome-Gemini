@@ -1,6 +1,10 @@
 type MediaListener = EventListenerOrEventListenerObject;
+type LegacyMediaListener = (this: MediaQueryList, ev: MediaQueryListEvent) => unknown;
 
 const MIN_DESKTOP_WIDTH = 960;
+const ignoreError = (error: unknown): void => {
+  void error;
+};
 
 const getDescriptor = (target: object, prop: string): PropertyDescriptor | undefined => {
   let current: object | null = target;
@@ -32,7 +36,9 @@ const getActualWidth = (): number => {
     if (innerWidthGetter) {
       width = Number(innerWidthGetter.call(window)) || 0;
     }
-  } catch {}
+  } catch (error) {
+    ignoreError(error);
+  }
   const docWidth = getClientWidth(document.documentElement);
   return Math.max(width, docWidth);
 };
@@ -55,10 +61,14 @@ if (!state.patched) {
     try {
       window.dispatchEvent(new Event('resize'));
       window.dispatchEvent(new Event('orientationchange'));
-    } catch {}
+    } catch (error) {
+      ignoreError(error);
+    }
     try {
       window.visualViewport?.dispatchEvent(new Event('resize'));
-    } catch {}
+    } catch (error) {
+      ignoreError(error);
+    }
   };
 
   state.notify = notifyAll;
@@ -74,7 +84,9 @@ if (!state.patched) {
       const desc = Object.getOwnPropertyDescriptor(target, prop);
       if (desc && desc.configurable === false) return;
       Object.defineProperty(target, prop, { get: getter, configurable: true });
-    } catch {}
+    } catch (error) {
+      ignoreError(error);
+    }
   };
 
   // Force a minimum width so Gemini keeps desktop DOM even in narrow windows.
@@ -100,8 +112,7 @@ if (!state.patched) {
 
   const originalMatchMedia = window.matchMedia?.bind(window);
   if (originalMatchMedia) {
-    const widthQueryTest =
-      /(?:min|max)-width\s*:\s*[0-9.]+px|\bwidth\s*:\s*[0-9.]+px/i;
+    const widthQueryTest = /(?:min|max)-width\s*:\s*[0-9.]+px|\bwidth\s*:\s*[0-9.]+px/i;
 
     const parseWidthConstraints = (query: string) => {
       const normalized = query.toLowerCase();
@@ -147,20 +158,25 @@ if (!state.patched) {
       return matches;
     };
 
-    const buildEvent = (
-      event: MediaQueryListEvent | undefined,
-      matches: boolean,
-      media: string,
-      target: MediaQueryList
-    ): MediaQueryListEvent =>
-      ({
-        matches,
-        media,
-        target,
-        currentTarget: target,
-        type: 'change',
-        timeStamp: event?.timeStamp ?? Date.now(),
-      }) as MediaQueryListEvent;
+    const buildEvent = (matches: boolean, media: string): MediaQueryListEvent => {
+      try {
+        return new MediaQueryListEvent('change', { matches, media });
+      } catch (error) {
+        ignoreError(error);
+        const fallback = new Event('change') as MediaQueryListEvent;
+        Object.defineProperty(fallback, 'matches', {
+          configurable: true,
+          enumerable: true,
+          value: matches,
+        });
+        Object.defineProperty(fallback, 'media', {
+          configurable: true,
+          enumerable: true,
+          value: media,
+        });
+        return fallback;
+      }
+    };
 
     const invokeListener = (
       listener: MediaListener,
@@ -174,12 +190,12 @@ if (!state.patched) {
       }
     };
 
-    const invokeLegacyListener = (listener: MediaListener, target: MediaQueryList): void => {
-      if (typeof listener === 'function') {
-        listener.call(target, target);
-      } else if (listener && typeof listener.handleEvent === 'function') {
-        listener.handleEvent(target as unknown as Event);
-      }
+    const invokeLegacyListener = (
+      listener: LegacyMediaListener,
+      event: MediaQueryListEvent,
+      target: MediaQueryList
+    ): void => {
+      listener.call(target, event);
     };
 
     const patchedMatchMedia = (query: string): MediaQueryList => {
@@ -188,29 +204,31 @@ if (!state.patched) {
 
       let lastMatches = matchesWidthQuery(query);
       const listeners = new Set<MediaListener>();
-      const legacyListeners = new Set<MediaListener>();
-      let onchange: MediaListener | null = null;
-      let wrapper: MediaQueryList;
+      const legacyListeners = new Set<LegacyMediaListener>();
+      let onchange: LegacyMediaListener | null = null;
+      let listenerTarget: MediaQueryList = real;
 
-      const notify = (event?: MediaQueryListEvent): void => {
+      const notify = (): void => {
         const nextMatches = matchesWidthQuery(query);
         if (nextMatches === lastMatches) return;
         lastMatches = nextMatches;
-        const patchedEvent = buildEvent(event, nextMatches, real.media, wrapper);
-        if (onchange) invokeListener(onchange, patchedEvent, wrapper);
-        listeners.forEach((listener) => invokeListener(listener, patchedEvent, wrapper));
-        legacyListeners.forEach((listener) => invokeLegacyListener(listener, wrapper));
+        const patchedEvent = buildEvent(nextMatches, real.media);
+        if (onchange) invokeLegacyListener(onchange, patchedEvent, listenerTarget);
+        listeners.forEach((listener) => invokeListener(listener, patchedEvent, listenerTarget));
+        legacyListeners.forEach((listener) =>
+          invokeLegacyListener(listener, patchedEvent, listenerTarget)
+        );
       };
 
-      const handleRealChange = (event?: MediaQueryListEvent) => notify(event);
+      const handleRealChange = (): void => notify();
 
       if (typeof real.addEventListener === 'function') {
         real.addEventListener('change', handleRealChange);
       } else if (typeof real.addListener === 'function') {
-        real.addListener(handleRealChange as (mql: MediaQueryList) => void);
+        real.addListener(handleRealChange);
       }
 
-      wrapper = {
+      const wrapper = {
         get media() {
           return real.media;
         },
@@ -218,10 +236,10 @@ if (!state.patched) {
           lastMatches = matchesWidthQuery(query);
           return lastMatches;
         },
-        addListener(listener: MediaListener) {
+        addListener(listener: LegacyMediaListener | null) {
           if (listener) legacyListeners.add(listener);
         },
-        removeListener(listener: MediaListener) {
+        removeListener(listener: LegacyMediaListener | null) {
           if (listener) legacyListeners.delete(listener);
         },
         addEventListener(type: string, listener: MediaListener | null) {
@@ -231,23 +249,26 @@ if (!state.patched) {
           if (type === 'change' && listener) listeners.delete(listener);
         },
         dispatchEvent(event: Event) {
-          if (event.type === 'change') notify(event as MediaQueryListEvent);
+          if (event.type === 'change') notify();
           return true;
         },
         get onchange() {
-          return onchange as MediaListener | null;
+          return onchange;
         },
-        set onchange(value: MediaListener | null) {
+        set onchange(value: LegacyMediaListener | null) {
           onchange = value;
         },
       } as MediaQueryList;
+      listenerTarget = wrapper;
 
-      mediaQueryNotifiers.add(() => notify());
+      mediaQueryNotifiers.add(notify);
       return wrapper;
     };
 
     try {
       window.matchMedia = patchedMatchMedia;
-    } catch {}
+    } catch (error) {
+      ignoreError(error);
+    }
   }
 }

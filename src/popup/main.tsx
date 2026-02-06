@@ -27,7 +27,8 @@ import { loadSettings, saveSettings } from '@/shared/storage';
 import './style.css';
 
 const GITHUB_URL = 'https://github.com/gakkunn/Ex-Chrome-Gemini';
-const SUPPORT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSf8hOHRBnTAKJni5cuEanlfeBabM4xkFCP9Tp_YVuBTXCeOeg/viewform';
+const SUPPORT_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSf8hOHRBnTAKJni5cuEanlfeBabM4xkFCP9Tp_YVuBTXCeOeg/viewform';
 const COFFEE_URL = 'https://www.buymeacoffee.com/gakkunn';
 const REVIEW_URL =
   'https://chromewebstore.google.com/detail/gemini-shortcut-effective/ignpkjaahmegdgnbmnpakehoekaligmm/reviews?hl=en&authuser=0';
@@ -512,7 +513,6 @@ const PopupApp = () => {
           </section>
         </>
       )}
-
     </div>
   );
 };
