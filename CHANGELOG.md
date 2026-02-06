@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0 - 2026-02-06
+### Features
+- **shortcuts:** Add a Share Conversation hotkey (`Cmd/Ctrl + Shift + H`)
+- **i18n:** Add Share Conversation label and failure toast keys across all locales
+- **popup:** Mark the Share Conversation shortcut as new in the shortcuts list
+
 ## 1.3.0 - 2026-01-22
 ### Features
 - **inject:** Add Keep Desktop UI spoofing to prevent mobile UI on narrow viewports
