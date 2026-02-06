@@ -193,7 +193,10 @@ const ShortcutRow = ({ definition, bindings, disabled, onSave }: ShortcutRowProp
   return (
     <div class="shortcut-row">
       <div class="shortcut-label">
-        <p>{definition.label}</p>
+        <p class="shortcut-label-text">
+          {definition.label}
+          {definition.id === 'shareConversation' && <span class="toggle-badge">new</span>}
+        </p>
       </div>
       <div
         class={[
