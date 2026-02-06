@@ -18,7 +18,8 @@ export type ShortcutId =
   | 'toggleShortcuts'
   | 'deleteChat'
   | 'uploadFiles'
-  | 'pinChat';
+  | 'pinChat'
+  | 'shareConversation';
 
 export type KeyBinding = {
   key: string;
@@ -164,6 +165,12 @@ export const SHORTCUT_DEFINITIONS: ShortcutDefinition[] = [
     labelKey: 'shortcut_label_pin_chat',
     category: 'otherShortcuts',
     defaultBindings: [{ key: 'p', code: 'KeyP', mod: true, shift: true }],
+  }),
+  shortcutDefinition({
+    id: 'shareConversation',
+    labelKey: 'shortcut_label_share_conversation',
+    category: 'otherShortcuts',
+    defaultBindings: [{ key: 'h', code: 'KeyH', mod: true, shift: true }],
   }),
 ];
 

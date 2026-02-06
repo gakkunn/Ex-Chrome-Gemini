@@ -1,5 +1,6 @@
 /**
- * Pin current chat (mod+Shift+P) and Open Temporary Chat (mod+I)
+ * Pin current chat (mod+Shift+P), Share conversation (mod+Shift+H),
+ * and Open Temporary Chat (mod+I)
  */
 
 import { getMessage } from '@/shared/i18n';
@@ -16,6 +17,8 @@ const T = {
   WAIT_REGION_FALLBACK_MS: 1200,
   WAIT_SELECTED_MS: 1200,
   WAIT_ACTIONS_BUTTON_MS: 800,
+  WAIT_SHARE_BUTTON_MS: 1500,
+  WAIT_PIN_BUTTON_MS: 1500,
   WAIT_TEMP_CHAT_BUTTON_MS: 1500,
 };
 
@@ -131,14 +134,36 @@ async function pinCurrentChatOnce(): Promise<void> {
   await toggleSideNav({ open: true });
   const region = await waitForRegionFast();
   const selectedConversation = await waitForSelectedFast(region);
-  if (!selectedConversation) return;
+  if (!selectedConversation) {
+    window.__gxt_utils?.showToast?.(getMessage('toast_no_chat_selected'), 'warning');
+    return;
+  }
   const menuButton = await ensureMenuButtonForSelected(region, selectedConversation);
   utils.click(menuButton);
   const pinBtn = await utils.waitForElement('button[data-test-id="pin-button"]', {
-    timeout: 1500,
+    timeout: T.WAIT_PIN_BUTTON_MS,
   });
   utils.click(pinBtn);
   console.log('[Gemini Hotkeys] Completed (Pin clicked)');
+}
+
+async function shareCurrentConversationOnce(): Promise<void> {
+  const utils = getUtils();
+  console.log('[Gemini Hotkeys] Share conversation starting');
+  await toggleSideNav({ open: true });
+  const region = await waitForRegionFast();
+  const selectedConversation = await waitForSelectedFast(region);
+  if (!selectedConversation) {
+    window.__gxt_utils?.showToast?.(getMessage('toast_no_chat_selected'), 'warning');
+    return;
+  }
+  const menuButton = await ensureMenuButtonForSelected(region, selectedConversation);
+  utils.click(menuButton);
+  const shareBtn = await utils.waitForElement('button[data-test-id="share-button"]', {
+    timeout: T.WAIT_SHARE_BUTTON_MS,
+  });
+  utils.click(shareBtn);
+  console.log('[Gemini Hotkeys] Completed (Share conversation clicked)');
 }
 
 async function openTemporaryChatOnce(): Promise<void> {
@@ -164,6 +189,11 @@ function keyHandler(e: KeyboardEvent): void {
     handlePinChatShortcut(e);
     return;
   }
+  const isShareConversationHotkey = isModKey(e) && e.shiftKey && !e.altKey && key === 'h';
+  if (isShareConversationHotkey) {
+    handleShareConversationShortcut(e);
+    return;
+  }
   if (isModKey(e) && !e.shiftKey && !e.altKey && key === 'i') {
     handleTemporaryChatShortcut(e);
     return;
@@ -173,12 +203,16 @@ function keyHandler(e: KeyboardEvent): void {
 export function initializePinChat(): void {
   const isMac = isMacPlatform();
   const modLabel = getModLabel({ isMac, useSymbol: true });
-  window.gxtHotkeys = { pinOnce: pinCurrentChatOnce, tempOnce: openTemporaryChatOnce };
+  window.gxtHotkeys = {
+    pinOnce: pinCurrentChatOnce,
+    shareOnce: shareCurrentConversationOnce,
+    tempOnce: openTemporaryChatOnce,
+  };
   if (!window.__gxt_hotkeysBound) {
     window.addEventListener('keydown', keyHandler, KEYDOWN_CAPTURE_OPTIONS);
     window.__gxt_hotkeysBound = true;
     console.log(
-      `[Gemini Hotkeys] Hotkeys (${modLabel}⇧P / ${modLabel}I) registered.`,
+      `[Gemini Hotkeys] Hotkeys (${modLabel}⇧P / ${modLabel}⇧H / ${modLabel}I) registered.`,
       window.gxtHotkeys
     );
   } else {
@@ -205,5 +239,16 @@ export function handleTemporaryChatShortcut(e: KeyboardEvent): void {
   openTemporaryChatOnce().catch((err) => {
     console.error('[Gemini Hotkeys] Error (temp):', err);
     window.__gxt_utils?.showToast?.(getMessage('toast_temp_chat_failed'), 'error');
+  });
+}
+
+export function handleShareConversationShortcut(e: KeyboardEvent): void {
+  if (!isFeatureEnabled('otherShortcuts')) return;
+  if (e.isComposing) return;
+  e.preventDefault();
+  e.stopPropagation();
+  shareCurrentConversationOnce().catch((err) => {
+    console.error('[Gemini Hotkeys] Error (share conversation):', err);
+    window.__gxt_utils?.showToast?.(getMessage('toast_share_failed'), 'error');
   });
 }

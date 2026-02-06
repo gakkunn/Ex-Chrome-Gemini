@@ -18,7 +18,7 @@ Built as an open-source Chrome Extension (Manifest V3) with Vite + TypeScript.
 - Safe send: require Cmd/Ctrl + Enter to send so Enter adds a newline
 - Vim-like scroll and focus toggle (j/k, J/K, Cmd/Ctrl + J/K, Shift + Space)
 - Model switching shortcuts for Fast/Thinking/Pro and the model menu
-- Chat utilities: pin chat, open temporary chat, delete chat with confirm, toggle sidebar, auto-close sidebar after new chat
+- Chat utilities: pin chat, share conversation, open temporary chat, delete chat with confirm, toggle sidebar, auto-close sidebar after new chat
 - Quick actions: file upload hotkey and shortcuts dialog (Cmd/Ctrl + /) with configurable bindings in the popup
 
 ---
@@ -75,7 +75,7 @@ npm run build # production bundle
    - Cmd/Ctrl + Enter: send; Enter alone adds a newline (safe send)
    - j / k, Shift + J / Shift + K, Cmd/Ctrl + J / Cmd/Ctrl + K: Vim-like scroll controls
    - Cmd+Shift+0 (macOS) / Ctrl+Shift+7 (Windows): switch to Fast model; Cmd/Ctrl + Shift + 8 / 9: switch to Thinking/Pro; Cmd/Ctrl + Shift + ↓: open model menu
-   - Cmd/Ctrl + U: open file upload; Cmd/Ctrl + Shift + Backspace: delete current chat (with confirmation); Cmd/Ctrl + Shift + P to pin chat; Cmd/Ctrl + I to start a temporary chat
+   - Cmd/Ctrl + U: open file upload; Cmd/Ctrl + Shift + Backspace: delete current chat (with confirmation); Cmd/Ctrl + Shift + P to pin chat; Cmd/Ctrl + Shift + H to share conversation; Cmd/Ctrl + I to start a temporary chat
    - Cmd/Ctrl + /: open the shortcuts dialog
 
 ---

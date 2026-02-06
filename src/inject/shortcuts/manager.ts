@@ -19,7 +19,11 @@ import {
   isShortcutsDialogVisible,
   showShortcutsDialog,
 } from '../features/shortcuts-dialog';
-import { handlePinChatShortcut, handleTemporaryChatShortcut } from '../features/pin-chat';
+import {
+  handlePinChatShortcut,
+  handleShareConversationShortcut,
+  handleTemporaryChatShortcut,
+} from '../features/pin-chat';
 import {
   getScrollingKey,
   handleVimScroll,
@@ -191,6 +195,14 @@ export class ShortcutsManager {
       return;
     }
 
+    if (
+      this.hasCustomBinding('shareConversation') &&
+      this.matchesShortcut('shareConversation', e)
+    ) {
+      handleShareConversationShortcut(e);
+      return;
+    }
+
     if (this.matchesShortcut('toggleModel', e)) {
       e.preventDefault();
       handleModelSwitch(null);
@@ -320,6 +332,7 @@ export class ShortcutsManager {
       addDefinition(sectionTitles.other, 'deleteChat');
       addDefinition(sectionTitles.other, 'uploadFiles');
       addDefinition(sectionTitles.other, 'pinChat');
+      addDefinition(sectionTitles.other, 'shareConversation');
     }
 
     addDefinition(sectionTitles.geminiDefaults, 'toggleShortcuts');

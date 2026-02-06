@@ -47,6 +47,7 @@ interface Window {
   };
   gxtHotkeys?: {
     pinOnce: () => Promise<void>;
+    shareOnce: () => Promise<void>;
     tempOnce: () => Promise<void>;
   };
 }
