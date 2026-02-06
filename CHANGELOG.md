@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.1 - 2026-02-06
+### Fixes
+- **inject:** Refine viewport spoof event handling to satisfy lint and TypeScript checks
+
+### Chores
+- **deps:** Upgrade `preact` and pin `undici` via overrides to resolve security advisories
+
 ## 1.4.0 - 2026-02-06
 ### Features
 - **shortcuts:** Add a Share Conversation hotkey (`Cmd/Ctrl + Shift + H`)
