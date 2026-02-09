@@ -13,6 +13,7 @@ import { handleEnterKey } from '../features/ctrl-enter-send';
 import { handleDeleteChatShortcut } from '../features/chat-delete';
 import { handleUploadShortcut } from '../features/file-upload';
 import { toggleFocus } from '../features/focus-management';
+import { handleCopyLastUserMessageShortcut } from '../features/copy-last-user-message';
 import { handleModelSwitch, MODEL_SELECTORS } from '../features/model-switch';
 import {
   closeShortcutsDialog,
@@ -203,6 +204,11 @@ export class ShortcutsManager {
       return;
     }
 
+    if (this.matchesShortcut('copyLastUserMessage', e)) {
+      handleCopyLastUserMessageShortcut(e);
+      return;
+    }
+
     if (this.matchesShortcut('toggleModel', e)) {
       e.preventDefault();
       handleModelSwitch(null);
@@ -333,6 +339,7 @@ export class ShortcutsManager {
       addDefinition(sectionTitles.other, 'uploadFiles');
       addDefinition(sectionTitles.other, 'pinChat');
       addDefinition(sectionTitles.other, 'shareConversation');
+      addDefinition(sectionTitles.other, 'copyLastUserMessage');
     }
 
     addDefinition(sectionTitles.geminiDefaults, 'toggleShortcuts');
