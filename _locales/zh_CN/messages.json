@@ -80,6 +80,7 @@
   "shortcut_label_upload_files": { "message": "上传文件" },
   "shortcut_label_pin_chat": { "message": "固定聊天" },
   "shortcut_label_share_conversation": { "message": "Share Conversation" },
+  "shortcut_label_copy_last_user_message": { "message": "Copy Last User Message" },
   "gemini_default_shortcut_new_chat": { "message": "新建聊天" },
   "gemini_default_shortcut_search": { "message": "搜索" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "切换侧边栏" },
@@ -94,6 +95,8 @@
   },
   "toast_upload_failed": { "message": "无法打开上传菜单。" },
   "toast_gem_create_failed": { "message": "无法打开 Gem 创建页面。请重新加载页面。" },
+  "toast_copy_last_user_message_success": { "message": "Last user message copied." },
+  "toast_copy_last_user_message_missing": { "message": "No user message found to copy." },
   "chat_delete_dialog_title": { "message": "删除聊天？" },
   "chat_delete_dialog_body_generic": { "message": "这将删除当前选中的聊天。" },
   "chat_delete_dialog_body_named": {

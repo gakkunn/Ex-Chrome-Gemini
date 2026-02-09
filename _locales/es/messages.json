@@ -90,6 +90,7 @@
   "shortcut_label_upload_files": { "message": "Subir archivos" },
   "shortcut_label_pin_chat": { "message": "Fijar chat" },
   "shortcut_label_share_conversation": { "message": "Share Conversation" },
+  "shortcut_label_copy_last_user_message": { "message": "Copy Last User Message" },
   "gemini_default_shortcut_new_chat": { "message": "Nuevo chat" },
   "gemini_default_shortcut_search": { "message": "Buscar" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "Alternar barra lateral" },
@@ -108,6 +109,8 @@
   "toast_gem_create_failed": {
     "message": "No se pudo abrir la página de creación de Gems. Vuelve a cargar la página."
   },
+  "toast_copy_last_user_message_success": { "message": "Last user message copied." },
+  "toast_copy_last_user_message_missing": { "message": "No user message found to copy." },
   "chat_delete_dialog_title": { "message": "¿Eliminar chat?" },
   "chat_delete_dialog_body_generic": { "message": "Se eliminará el chat seleccionado." },
   "chat_delete_dialog_body_named": {

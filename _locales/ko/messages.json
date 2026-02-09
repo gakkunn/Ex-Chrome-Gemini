@@ -86,6 +86,7 @@
   "shortcut_label_upload_files": { "message": "파일 업로드" },
   "shortcut_label_pin_chat": { "message": "채팅 고정" },
   "shortcut_label_share_conversation": { "message": "Share Conversation" },
+  "shortcut_label_copy_last_user_message": { "message": "Copy Last User Message" },
   "gemini_default_shortcut_new_chat": { "message": "새 채팅" },
   "gemini_default_shortcut_search": { "message": "검색" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "사이드바 전환" },
@@ -104,6 +105,8 @@
   "toast_gem_create_failed": {
     "message": "Gem 생성 페이지를 열 수 없습니다. 페이지를 새로고침해 주세요."
   },
+  "toast_copy_last_user_message_success": { "message": "Last user message copied." },
+  "toast_copy_last_user_message_missing": { "message": "No user message found to copy." },
   "chat_delete_dialog_title": { "message": "채팅을 삭제할까요?" },
   "chat_delete_dialog_body_generic": { "message": "현재 선택된 채팅이 삭제됩니다." },
   "chat_delete_dialog_body_named": {

@@ -82,6 +82,7 @@
   "shortcut_label_upload_files": { "message": "上傳檔案" },
   "shortcut_label_pin_chat": { "message": "釘選聊天" },
   "shortcut_label_share_conversation": { "message": "Share Conversation" },
+  "shortcut_label_copy_last_user_message": { "message": "Copy Last User Message" },
   "gemini_default_shortcut_new_chat": { "message": "新增聊天" },
   "gemini_default_shortcut_search": { "message": "搜尋" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "切換側邊欄" },
@@ -96,6 +97,8 @@
   },
   "toast_upload_failed": { "message": "無法開啟上傳選單。" },
   "toast_gem_create_failed": { "message": "無法開啟 Gem 建立頁面，請重新載入頁面。" },
+  "toast_copy_last_user_message_success": { "message": "Last user message copied." },
+  "toast_copy_last_user_message_missing": { "message": "No user message found to copy." },
   "chat_delete_dialog_title": { "message": "要刪除聊天嗎？" },
   "chat_delete_dialog_body_generic": { "message": "這會刪除目前選取的聊天。" },
   "chat_delete_dialog_body_named": {

@@ -90,6 +90,7 @@
   "shortcut_label_upload_files": { "message": "ファイルをアップロード" },
   "shortcut_label_pin_chat": { "message": "チャットをピン留め" },
   "shortcut_label_share_conversation": { "message": "Share Conversation" },
+  "shortcut_label_copy_last_user_message": { "message": "Copy Last User Message" },
   "gemini_default_shortcut_new_chat": { "message": "新しいチャット" },
   "gemini_default_shortcut_search": { "message": "検索" },
   "gemini_default_shortcut_toggle_sidebar": { "message": "サイドバーを切り替え" },
@@ -108,6 +109,8 @@
   "toast_gem_create_failed": {
     "message": "Gem 作成ページを開けませんでした。ページを再読み込みしてください。"
   },
+  "toast_copy_last_user_message_success": { "message": "Last user message copied." },
+  "toast_copy_last_user_message_missing": { "message": "No user message found to copy." },
   "chat_delete_dialog_title": { "message": "チャットを削除しますか？" },
   "chat_delete_dialog_body_generic": { "message": "現在選択中のチャットを削除します。" },
   "chat_delete_dialog_body_named": {

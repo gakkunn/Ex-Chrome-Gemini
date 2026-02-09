@@ -250,6 +250,7 @@
     "description": "Label for the Pin Chat shortcut."
   },
   "shortcut_label_share_conversation": { "message": "Share Conversation" },
+  "shortcut_label_copy_last_user_message": { "message": "Copy Last User Message" },
   "gemini_default_shortcut_new_chat": {
     "message": "New chat",
     "description": "Gemini default shortcut label for starting a new chat."
@@ -295,6 +296,8 @@
     "message": "Could not open Gem creation. Please reload the page.",
     "description": "Toast shown when the Gem creation page cannot be opened."
   },
+  "toast_copy_last_user_message_success": { "message": "Last user message copied." },
+  "toast_copy_last_user_message_missing": { "message": "No user message found to copy." },
   "chat_delete_dialog_title": {
     "message": "Delete chat?",
     "description": "Title of the custom delete chat confirmation dialog."
