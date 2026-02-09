@@ -24,6 +24,7 @@ type ShortcutDefinitionWithCategory = (typeof SHORTCUT_DEFINITIONS)[number];
 const isMac = isMacPlatform();
 
 const featureLabels: Record<FeatureCategory, string> = {
+  preserveScrollOnSend: 'Preserve Scroll on Send',
   vimScroll: 'Vim-like Scroll',
   keepDesktopUI: 'Keep Desktop UI',
   wideScreen: 'Wide Screen (Clean UI + Focus)',
@@ -32,6 +33,7 @@ const featureLabels: Record<FeatureCategory, string> = {
 };
 
 const featureOrder: FeatureCategory[] = [
+  'preserveScrollOnSend',
   'keepDesktopUI',
   'vimScroll',
   'wideScreen',
@@ -152,7 +154,7 @@ function renderFeatureToggles() {
     if (category === 'keepDesktopUI') {
       text.setAttribute('data-tooltip', keepDesktopTooltip);
     }
-    if (category === 'keepDesktopUI') {
+    if (category === 'keepDesktopUI' || category === 'preserveScrollOnSend') {
       const badge = document.createElement('span');
       badge.className = 'toggle-badge';
       badge.textContent = 'new';

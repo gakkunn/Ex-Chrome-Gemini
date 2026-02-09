@@ -38,6 +38,7 @@ const ICON_COFFEE_SRC = '/img/coffee.svg';
 const ICON_REVIEW_SRC = '/img/review.svg';
 
 const featureLabelKeys: Record<FeatureCategory, I18nKey> = {
+  preserveScrollOnSend: 'popup_toggle_label_preserve_scroll_on_send',
   vimScroll: 'popup_toggle_label_vim_scroll',
   keepDesktopUI: 'popup_toggle_label_keep_desktop_ui',
   wideScreen: 'popup_toggle_label_wide_screen',
@@ -46,6 +47,7 @@ const featureLabelKeys: Record<FeatureCategory, I18nKey> = {
 };
 
 const orderedCategories: FeatureCategory[] = [
+  'preserveScrollOnSend',
   'keepDesktopUI',
   'vimScroll',
   'wideScreen',
@@ -479,7 +481,9 @@ const PopupApp = () => {
                     data-tooltip={category === 'keepDesktopUI' ? keepDesktopTooltip : undefined}
                   >
                     {getFeatureLabel(category)}
-                    {category === 'keepDesktopUI' && <span class="toggle-badge">new</span>}
+                    {(category === 'keepDesktopUI' || category === 'preserveScrollOnSend') && (
+                      <span class="toggle-badge">new</span>
+                    )}
                   </span>
                 </label>
               ))}
