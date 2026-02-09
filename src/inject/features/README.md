@@ -1,6 +1,6 @@
 # Gemini Extension Features
 
-This directory contains 10 modular feature implementations for the Gemini Shortcut Effective Extension. Each feature is self-contained with proper TypeScript types and exports a single initialization function.
+This directory contains 11 modular feature implementations for the Gemini Shortcut Effective Extension. Each feature is self-contained with proper TypeScript types and exports a single initialization function.
 
 ## Feature Modules
 
@@ -100,6 +100,14 @@ This directory contains 10 modular feature implementations for the Gemini Shortc
 - Smooth easing animation with `easeInOutQuad`
 - Different animation durations for different actions
 - Detects scrollable container intelligently
+
+### 11. Copy Last User Message (`copy-last-user-message.ts`) - 74 lines
+
+**Hotkey:** `Cmd/Ctrl + Shift + Y`
+
+- Finds the latest user turn's `Copy prompt` button in chat history
+- Triggers Gemini's built-in copy action via pointer/mouse click sequence
+- Shows success/error toast notifications
 
 ## Architecture
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.0 - 2026-02-09
+### Features
+- **shortcuts:** Add a Copy Last User Message hotkey (`Cmd/Ctrl + Shift + Y`)
+- **inject:** Trigger Gemini's latest `Copy prompt` button with toast feedback
+- **i18n:** Add copy-last-user-message label and toast keys across all locales
+
 ## 1.4.1 - 2026-02-06
 ### Fixes
 - **inject:** Refine viewport spoof event handling to satisfy lint and TypeScript checks
