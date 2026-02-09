@@ -14,6 +14,7 @@
   "popup_load_error": { "message": "無法載入設定，請重新載入擴充功能。" },
   "popup_settings_unavailable": { "message": "無法載入設定。" },
   "popup_toggle_label_vim_scroll": { "message": "Vim 風格捲動" },
+  "popup_toggle_label_preserve_scroll_on_send": { "message": "送出時保持捲動位置" },
   "popup_toggle_label_keep_desktop_ui": { "message": "Keep Desktop UI" },
   "popup_toggle_keep_desktop_ui_tooltip": { "message": "即使螢幕寬度為959px或更小，也會保持版面配置。開啟後即使在959px或更小的螢幕上也可使用 Delete Chat 和 Pin Chat 快捷鍵。建議保持開啟以獲得功能更完整的版面。" },
   "popup_toggle_label_wide_screen": { "message": "寬螢幕（俐落介面 + 聚焦）" },

@@ -16,6 +16,7 @@
   },
   "popup_settings_unavailable": { "message": "Impossible de charger les paramètres." },
   "popup_toggle_label_vim_scroll": { "message": "Défilement façon Vim" },
+  "popup_toggle_label_preserve_scroll_on_send": { "message": "Conserver la position de défilement à l'envoi" },
   "popup_toggle_label_keep_desktop_ui": { "message": "Keep Desktop UI" },
   "popup_toggle_keep_desktop_ui_tooltip": { "message": "Conserve la mise en page même lorsque l'écran fait 959px ou moins. En l'activant, les raccourcis Delete Chat et Pin Chat sont aussi disponibles sur les écrans de 959px ou moins. Nous recommandons de le laisser activé pour une mise en page plus complète." },
   "popup_toggle_label_wide_screen": { "message": "Grand écran (interface épurée + focus)" },

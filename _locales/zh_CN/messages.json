@@ -14,6 +14,7 @@
   "popup_load_error": { "message": "无法加载设置。请重新加载扩展程序。" },
   "popup_settings_unavailable": { "message": "无法加载设置。" },
   "popup_toggle_label_vim_scroll": { "message": "Vim 风格滚动" },
+  "popup_toggle_label_preserve_scroll_on_send": { "message": "发送时保持滚动位置" },
   "popup_toggle_label_keep_desktop_ui": { "message": "Keep Desktop UI" },
   "popup_toggle_keep_desktop_ui_tooltip": { "message": "即使屏幕宽度为959px或更小，也会保持布局。开启后即使在959px或更小的屏幕上也可使用 Delete Chat 和 Pin Chat 快捷键。建议保持开启以获得功能更完整的布局。" },
   "popup_toggle_label_wide_screen": { "message": "宽屏（简洁界面 + 聚焦）" },

@@ -9,6 +9,7 @@ export const I18N_KEYS = [
   'popup_footer_review_prompt',
   'popup_load_error',
   'popup_settings_unavailable',
+  'popup_toggle_label_preserve_scroll_on_send',
   'popup_toggle_label_vim_scroll',
   'popup_toggle_label_keep_desktop_ui',
   'popup_toggle_keep_desktop_ui_tooltip',
@@ -98,6 +99,7 @@ const FALLBACK_MESSAGES: Record<I18nKey, string> = {
   popup_footer_review_prompt: 'Even a short comment would truly make me happy',
   popup_load_error: 'Failed to load settings. Please reload the extension.',
   popup_settings_unavailable: 'Unable to load settings.',
+  popup_toggle_label_preserve_scroll_on_send: 'Preserve Scroll on Send',
   popup_toggle_label_vim_scroll: 'Vim-like Scroll',
   popup_toggle_label_keep_desktop_ui: 'Keep Desktop UI',
   popup_toggle_keep_desktop_ui_tooltip:

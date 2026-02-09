@@ -39,6 +39,10 @@
     "message": "Unable to load settings.",
     "description": "Fallback message when no settings are available."
   },
+  "popup_toggle_label_preserve_scroll_on_send": {
+    "message": "Preserve Scroll on Send",
+    "description": "Label for the preserve scroll on send toggle."
+  },
   "popup_toggle_label_vim_scroll": {
     "message": "Vim-like Scroll",
     "description": "Label for the Vim-like Scroll toggle."
