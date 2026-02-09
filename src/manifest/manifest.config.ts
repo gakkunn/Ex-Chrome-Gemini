@@ -5,7 +5,7 @@ const manifest = defineManifest(() => ({
   default_locale: 'en',
   name: '__MSG_ext_name__',
   short_name: '__MSG_ext_short_name__',
-  version: '1.4.1',
+  version: '1.5.0',
   description: '__MSG_ext_description__',
   icons: {
     '16': 'icons/icon-16.png',

@@ -5,6 +5,12 @@
 - **shortcuts:** Add a Copy Last User Message hotkey (`Cmd/Ctrl + Shift + Y`)
 - **inject:** Trigger Gemini's latest `Copy prompt` button with toast feedback
 - **i18n:** Add copy-last-user-message label and toast keys across all locales
+- **popup:** Add a Preserve Scroll Position on Send toggle
+- **inject:** Preserve scroll position when sending a message
+- **i18n:** Add preserve-scroll-on-send locale keys across all locales
+
+### Documentation
+- Document the Copy Last User Message shortcut
 
 ## 1.4.1 - 2026-02-06
 ### Fixes
