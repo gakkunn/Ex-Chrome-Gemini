@@ -1,4 +1,5 @@
 export type FeatureCategory =
+  | 'preserveScrollOnSend'
   | 'vimScroll'
   | 'keepDesktopUI'
   | 'wideScreen'
@@ -8,6 +9,7 @@ export type FeatureCategory =
 export type FeatureToggles = Record<FeatureCategory, boolean>;
 
 export const DEFAULT_FEATURE_TOGGLES: FeatureToggles = {
+  preserveScrollOnSend: false,
   vimScroll: true,
   keepDesktopUI: true,
   wideScreen: true,

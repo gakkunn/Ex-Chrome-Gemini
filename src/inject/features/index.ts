@@ -12,3 +12,4 @@ export { initializePinChat } from './pin-chat';
 export { initializeModelSwitch } from './model-switch';
 export { initializeCtrlEnterSend } from './ctrl-enter-send';
 export { initializeVimScroll } from './vim-scroll';
+export { initializePreserveScrollOnSend } from './preserve-scroll-on-send';

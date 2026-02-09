@@ -19,6 +19,7 @@ import {
   initializeChatDelete,
   initializeFileUpload,
   initializePinChat,
+  initializePreserveScrollOnSend,
 } from './features';
 import { ShortcutsManager } from './shortcuts/manager';
 import { setFeatureToggles } from './state/toggles';
@@ -60,6 +61,7 @@ async function initializeExtension(): Promise<void> {
   initializeChatDelete();
   initializeFileUpload();
   initializePinChat();
+  initializePreserveScrollOnSend();
 
   // Initialize ShortcutsManager
   const shortcutsManager = new ShortcutsManager(currentSettings);
